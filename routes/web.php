@@ -16,3 +16,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('upload',function(){
+
+    dd(request()->file('file')->store(
+        'my-file',
+        's3'
+    ));
+
+    return back();
+
+})->name('upload');
+
+
+Route::get('/fileUpload', function () {
+    return view('fileUpload');
+});
