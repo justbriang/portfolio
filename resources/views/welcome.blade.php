@@ -998,7 +998,7 @@
           		</div>
           		<div>
 	          		<h3 class="mb-4">Address</h3>
-		            <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+		            <p>Bumbani Road, Nairobi, Kenya 0100</p>
 		          </div>
 	          </div>
           </div>
@@ -1009,7 +1009,7 @@
           		</div>
           		<div>
 	          		<h3 class="mb-4">Contact Number</h3>
-		            <p><a href="tel://1234567920">+ 1235 2355 98</a></p>
+		            <p><a href="tel://1234567920">+ 254713021636</a></p>
 	            </div>
 	          </div>
           </div>
@@ -1020,7 +1020,7 @@
           		</div>
           		<div>
 	          		<h3 class="mb-4">Email Address</h3>
-		            <p><a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+		            <p><a href="mailto:elizabeth.waeni.m@gmail.com">elizabeth.waeni.m@gmail.com</a></p>
 		          </div>
 	          </div>
           </div>
@@ -1031,24 +1031,62 @@
 
         <div class="row no-gutters block-9">
           <div class="col-md-6 order-md-last d-flex">
-            <form action="#" class="bg-light p-4 p-md-5 contact-form">
+
+          @if(Session::has('success'))
+   <div class="alert alert-success">
+     {{ Session::get('success') }}
+   </div>
+@endif
+
+<div class="bg-light p-4 p-md-5 contact-form">
+  
+{!! Form::open(['route'=>'contact-us.store']) !!}
+<div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
+{!! Form::label('Name:') !!}
+{!! Form::text('name', old('name'), ['class'=>'form-control', 'placeholder'=>'Enter Name']) !!}
+<span class="text-danger">{{ $errors->first('name') }}</span>
+</div>
+<div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
+{!! Form::label('Email:') !!}
+{!! Form::text('email', old('email'), ['class'=>'form-control', 'placeholder'=>'Enter Email']) !!}
+<span class="text-danger">{{ $errors->first('email') }}</span>
+</div>
+<div class="form-group {{ $errors->has('subject') ? 'has-error' : '' }}">
+{!! Form::label('Subject:') !!}
+{!! Form::text('subject', old('subject'), ['class'=>'form-control', 'placeholder'=>'Enter Subject']) !!}
+<span class="text-danger">{{ $errors->first('name') }}</span>
+</div>
+<div class="form-group {{ $errors->has('message') ? 'has-error' : '' }}">
+{!! Form::label('Message:') !!}
+{!! Form::textarea('message', old('message'), ['class'=>'form-control', 'placeholder'=>'Enter Message']) !!}
+<span class="text-danger">{{ $errors->first('message') }}</span>
+</div>
+<div class="form-group">
+<button class="btn btn-primary py-3 px-5">Contact US!</button>
+</div>
+{!! Form::close() !!}
+</div>
+
+<!-- 
+            <form action="/contact-us" method= "post" class="bg-light p-4 p-md-5 contact-form">
+            {{csrf_field()}}
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
+                <input type="text" name="name" class="form-control" placeholder="Enter Your Name">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
+                <input type="text" name="email" class="form-control" placeholder="Enter Your Email">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
+                <input type="text" name="subject" class="form-control" placeholder="Subject">
               </div>
               <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                <textarea name="" id="" cols="30" rows="7"  name="message" class="form-control" placeholder="Message"></textarea>
               </div>
               <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                <input type="submit" value="Send Message" name="send" class="btn btn-primary py-3 px-5">
               </div>
-            </form>
-          
+            </form> -->
+
           </div>
 
           <div class="col-md-6 d-flex">

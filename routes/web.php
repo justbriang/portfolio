@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactUSController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +34,10 @@ Route::post('upload',function(){
 Route::get('/fileUpload', function () {
     return view('fileUpload');
 });
+
+//Route::get('contact-us', 'ContactUSController@contactUS');
+//Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactUSPost']);
+
+
+Route::resource('contact-us', ContactUSController::class);
+
