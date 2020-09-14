@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>PORTFOLIO DEMO TEMPLATE</title>
+    <title>This Is Me!</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -38,12 +38,12 @@
 	
   </head>
   
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" style="background-color:#f0f8ff;">
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" style="background-color:#D3D3D3;">
 	  
 	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html"><span >J </span>Doe</a>
+	      <a class="navbar-brand" href="index.html"><span >E </span>Mutisya</a>
 	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -67,20 +67,20 @@
         <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
           <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-center">
           	<div class="text text-center">
-          		<span class="subheading"style="color:#a9ba9d">Hello! I am</span>
-		  				<h1>Jane Doe</h1>
+          		<span class="subheading"style="color:#556B2F">Hello! I am</span>
+		  				<h1>Elizabeth Mutisya</h1>
 			  				<h2>I'm a junior
 								  <span
 								     class="txt-rotate"
 									
 								     data-period="2000"
-								     data-rotate='[ "Web Designer.", "Developer.", "Photographer." ]'></span>
+								     data-rotate='[ "Web Designer.", "Developer.", "Designer." ]'></span>
 								</h2>
 								<br>
 								
-									<h6>Designing With Passion While Exploring The World...</h6>
+									<h6 >Designing With Passion While Exploring The World...</h6>
 									<br>
-									<span class ="subheading"style="color:#a9ba9d" >More</span>
+									<span class ="subheading"style="color:#556B2F" >More</span>
 							</div>
 							
             </div>
@@ -112,16 +112,17 @@
 		          	<h1 class="big">About</h1>
 		            <h2 class="mb-4">About Me</h2>
       
-              <div class="subheading mb-5"style="color:#a9ba9d">THE NEXT BIG IDEA IS WAITING FOR ITS NEXT BIG CHANGER.
+              <div class="subheading mb-5"style="color:#556B2F">Strive not to be a success, but rather to be of value- Albert Einstein
+
                  
               </div>
-              <p class="mb-5" style="max-width: 500px;" >I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+              <p class="mb-5" style="max-width: 500px;" >My name is Elizabeth, I live in Nairobi but i call many places my home. Currently i'm pursuing Computer Science at Strathmore University. I am passionate about Databases, Software Engineering, Web and Android Development. I always try to enrich my academic path with other activities such as volunteer work and associativism within the university.</p>
 			  <ul class="list basic_info">
 		
-										<i class="fa fa-calendar" style="font-size:24px ";"color:#a67b5b" ></i> 31st December, 1992<br>
-										<i class="fa fa-phone" style="font-size:24px"></i> (+254)712345678<br>
-										<i class="fa fa-envelope-o" style="font-size:24px"></i> janedoe@gmail.com<br>
-										<i class="fa fa-home" style="font-size:24px"></i> Westlands, Nairobi
+										<i class="fa fa-calendar" style="font-size:24px ";></i> 1st April, 2000<br>
+										<i class="fa fa-phone" style="font-size:24px"></i> (+254)713021636<br>
+										<i class="fa fa-envelope-o" style="font-size:24px"></i> elizabeth.waeni.m@gmail.com<br>
+										<i class="fa fa-home" style="font-size:24px"></i> Nairobi, Kenya
 									</ul>
 									<br>
 			  <p><a href="#" class="btn btn-primary py-3 px-3"  >Download CV</a></p><br>
