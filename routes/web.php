@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ProjectsController;
+use App\Http\Controllers\ContactUSController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::resource('projects', ProjectsController::class);
+Route::resource('contact-us', ContactUSController::class);
+//Route::post('/projects', [ProjectsController::class, 'store']);
+
+// Route::post('/projects', 'ProjectsController@store');
+//Route::get('/projects/create','ProjectsController@create');
