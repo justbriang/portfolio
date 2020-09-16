@@ -127,8 +127,10 @@
                         <i class="feature-box__icon icon-basic-heart"></i>
                         <h3 class="heading-tertiary u-margin-bottom-small">Live a healthier life</h3>
                         <p class="feature-box__text">
+                          gegegevduevcyvwdcwec
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
                         </p>
+                       
                     </div>
                 </div>
             </div>
@@ -244,11 +246,39 @@
                 <a href="#" class="btn btn--green">Discover all tours</a>
             </div>
         </section> -->
-        <section class="homes">
+        <section class="homes u-margin-bottom-big">
+        <div class="row">
+                <div class="col-1-of-4">
+                <button class="btn success" onclick="myFunction()">android</button>
+                </div>
+                <div class="col-1-of-4">
+                <button class="btn success" onclick="myFunction()">laravel</button>
+                </div>
+                <div class="col-1-of-4">
+                <button class="btn success" onclick="myFunction()">node js</button>
+                </div>
+                <div class="col-1-of-4">
+                <button class="btn success" onclick="myFunction()">react js</button>
+                </div>
+            </div>
         @if(count($projects)>0)
+     
 
             @foreach($projects as $project)
-
+            <div class="row">
+                <div class="col-1-of-4">
+                <button class="btn success" onclick="myFunction()">android</button>
+                </div>
+                <div class="col-1-of-4">
+                <button class="btn success" onclick="myFunction()">laravel</button>
+                </div>
+                <div class="col-1-of-4">
+                <button class="btn success" onclick="myFunction()">node js</button>
+                </div>
+                <div class="col-1-of-4">
+                <button class="btn success" onclick="myFunction()">react js</button>
+                </div>
+            </div>
             <div class="home">
                 <img src='{{ $project->imgUrl }}' alt="House 1" class="home__img">
                 <svg class="home__like">
@@ -467,7 +497,28 @@
             </div>
         </section>
         -->
+        <script>
+function myFunction(catergory) {
+    // document.getElementById("demo").style.color = "red";
+    switch(category){
+        case "android":
+        console.log("android clicked");
+        break;
+        case "reactjs":
+        console.log("reactjs clicked");
+        break;
+        case "nodejs":
+        console.log("nodejs clicked");
+        break;
+        default:
+        console.log("laravel clicked");
+        break;
 
+    }
+
+
+}
+</script>
 </body>
 
 </html>

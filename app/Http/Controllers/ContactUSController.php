@@ -47,7 +47,7 @@ class ContactUSController extends Controller
            ), function($message)
        {
            $message->from('saquib.gt@gmail.com');
-           $message->to('saquib.rizwan@cloudways.com', 'Admin');
+           $message->to('brian.karanja@strathmore.edu', 'Admin');
        });
         return back()->with('success', 'Thanks for contacting us!');
        }
