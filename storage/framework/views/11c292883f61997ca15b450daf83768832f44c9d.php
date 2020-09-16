@@ -264,22 +264,22 @@
         </section>
     
         <section class="homes" id="project">
-            @if(count($projects)>0)
+            <?php if(count($projects)>0): ?>
             
-            @foreach($projects as $project)
+            <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
         <div class="home">
-        <img src='{{ $project->imgUrl }}' alt="House 1" class="home__img"> 
+        <img src='<?php echo e($project->imgUrl); ?>' alt="House 1" class="home__img"> 
         
         <svg class="home__like">
             <use xlink:href="img/sprite.svg#icon-heart-full"></use>
         </svg>
-        <h5 class="home__name">{{ $project->title }}</h5>
+        <h5 class="home__name"><?php echo e($project->title); ?></h5>
         <div class="home__location">
             <svg>
                 <use xlink:href="img/sprite.svg#icon-map-pin"></use>
             </svg>
-            <p><strong>Description: </strong>{{ $project->description }}</p>
+            <p><strong>Description: </strong><?php echo e($project->description); ?></p>
         </div>
 
         <div class="home__area">
@@ -292,58 +292,70 @@
             <svg>
                 <use xlink:href="img/sprite.svg#icon-key"></use>
             </svg>
-            <p><strong>Tech_stack: </strong>{{ $project->tech_stack }}</p>
+            <p><strong>Tech_stack: </strong><?php echo e($project->tech_stack); ?></p>
         </div>
         <button class="btn-imgbtn home__btn">Contact realtor</button>
     </div>
 
 
-@endforeach
-@endif
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+<?php endif; ?>
 </section>
   
        
     <div class="row no-gutters block-9">
         <div class="col-md-6 order-md-last d-flex">
 
-        @if(Session::has('success'))
+        <?php if(Session::has('success')): ?>
  <div class="alert alert-success">
-   {{ Session::get('success') }}
+   <?php echo e(Session::get('success')); ?>
+
  </div>
-@endif
+<?php endif; ?>
 
 <div class="bg-light p-4 p-md-5 contact-form">
 
-{!! Form::open(['route'=>'contact-us.store']) !!}
-<div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
-{!! Form::label('Name:') !!}
-{!! Form::text('name', old('name'), ['class'=>'form-control', 'placeholder'=>'Enter Name']) !!}
-<span class="text-danger">{{ $errors->first('name') }}</span>
+<?php echo Form::open(['route'=>'contact-us.store']); ?>
+
+<div class="form-group <?php echo e($errors->has('name') ? 'has-error' : ''); ?>">
+<?php echo Form::label('Name:'); ?>
+
+<?php echo Form::text('name', old('name'), ['class'=>'form-control', 'placeholder'=>'Enter Name']); ?>
+
+<span class="text-danger"><?php echo e($errors->first('name')); ?></span>
 </div>
-<div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
-{!! Form::label('Email:') !!}
-{!! Form::text('email', old('email'), ['class'=>'form-control', 'placeholder'=>'Enter Email']) !!}
-<span class="text-danger">{{ $errors->first('email') }}</span>
+<div class="form-group <?php echo e($errors->has('email') ? 'has-error' : ''); ?>">
+<?php echo Form::label('Email:'); ?>
+
+<?php echo Form::text('email', old('email'), ['class'=>'form-control', 'placeholder'=>'Enter Email']); ?>
+
+<span class="text-danger"><?php echo e($errors->first('email')); ?></span>
 </div>
-<div class="form-group {{ $errors->has('subject') ? 'has-error' : '' }}">
-{!! Form::label('Subject:') !!}
-{!! Form::text('subject', old('subject'), ['class'=>'form-control', 'placeholder'=>'Enter Subject']) !!}
-<span class="text-danger">{{ $errors->first('name') }}</span>
+<div class="form-group <?php echo e($errors->has('subject') ? 'has-error' : ''); ?>">
+<?php echo Form::label('Subject:'); ?>
+
+<?php echo Form::text('subject', old('subject'), ['class'=>'form-control', 'placeholder'=>'Enter Subject']); ?>
+
+<span class="text-danger"><?php echo e($errors->first('name')); ?></span>
 </div>
-<div class="form-group {{ $errors->has('message') ? 'has-error' : '' }}">
-{!! Form::label('Message:') !!}
-{!! Form::textarea('message', old('message'), ['class'=>'form-control', 'placeholder'=>'Enter Message']) !!}
-<span class="text-danger">{{ $errors->first('message') }}</span>
+<div class="form-group <?php echo e($errors->has('message') ? 'has-error' : ''); ?>">
+<?php echo Form::label('Message:'); ?>
+
+<?php echo Form::textarea('message', old('message'), ['class'=>'form-control', 'placeholder'=>'Enter Message']); ?>
+
+<span class="text-danger"><?php echo e($errors->first('message')); ?></span>
 </div>
 <div class="form-group">
 <button class="btn btn-primary py-3 px-5">Contact US!</button>
 </div>
-{!! Form::close() !!}
+<?php echo Form::close(); ?>
+
 </div>
 
 <!--
           <form action="/contact-us" method= "post" class="bg-light p-4 p-md-5 contact-form">
-          {{csrf_field()}}
+          <?php echo e(csrf_field()); ?>
+
             <div class="form-group">
               <input type="text" name="name" class="form-control" placeholder="Enter Your Name">
             </div>
@@ -374,51 +386,7 @@
   </section>
     </main>
 
-    {{-- <footer class="footer">
-        <div class="footer__logo-box">
-            <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
-        </div>
-        <div class="row">
-            <div class="col-1-of-2">
-                <div class="footer__navigation">
-                    <ul class="footer__list">
-                        <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Carrers</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-1-of-2">
-                <p class="footer__copyright">
-                    Built by <a href="#" class="footer__link">Jonas Schmedtmann</a> for his online course <a href="#" class="footer__link">Advanced CSS and Sass</a>. Copyright &copy; by Jonas Schmedtmann. You are 100% allowed to use this webpage for both
-                    personal and commercial use, but NOT to claim it as your own design. A credit to the original author, Jonas Schmedtmann, is of course highly appreciated!
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <div class="popup" id="popup">
-        <div class="popup__content">
-            <div class="popup__left">
-                <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
-                <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
-            </div>
-            <div class="popup__right">
-                <a href="#section-tours" class="popup__close">&times;</a>
-                <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
-                <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
-                <p class="popup__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed sed risus pretium quam. Aliquam sem et tortor consequat id. Volutpat odio facilisis mauris sit amet massa vitae. Mi bibendum
-                    neque egestas congue. Placerat orci nulla pellentesque dignissim enim sit. Vitae semper quis lectus nulla at volutpat diam ut venenatis. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus et. Proin fermentum leo
-                    vel orci porta non pulvinar neque laoreet. Gravida neque convallis a cras semper. Molestie at elementum eu facilisis sed odio morbi quis. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget. Nam libero justo laoreet sit.
-                    Amet massa vitae tortor condimentum lacinia quis vel eros donec. Sit amet facilisis magna etiam. Imperdiet sed euismod nisi porta.
-                </p>
-                <a href="#" class="btn btn--green">Book now</a>
-            </div>
-        </div>
-    </div> --}}
+    
 
     <!--
         <section class="grid-test">
@@ -496,21 +464,21 @@ function myFunction(category) {
         case "android":
             document.getElementById("project").innerHTML = ""; 
             document.getElementById("project").innerHTML =`<section class="homes">
-            @if(count($projects)>0)
-            @foreach($projects as $project)
-            @if($project->tech_stack=='android')
+            <?php if(count($projects)>0): ?>
+            <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php if($project->tech_stack=='android'): ?>
         <div class="home">
-         <img src='{{ $project->imgUrl }}' alt="House 1" class="home__img">
+         <img src='<?php echo e($project->imgUrl); ?>' alt="House 1" class="home__img">
         
         <svg class="home__like">
             <use xlink:href="img/sprite.svg#icon-heart-full"></use>
         </svg>
-        <h5 class="home__name">{{ $project->title }}</h5>
+        <h5 class="home__name"><?php echo e($project->title); ?></h5>
         <div class="home__location">
             <svg>
                 <use xlink:href="img/sprite.svg#icon-map-pin"></use>
             </svg>
-            <p><strong>Description: </strong>{{ $project->description }}</p>
+            <p><strong>Description: </strong><?php echo e($project->description); ?></p>
         </div>
 
         <div class="home__area">
@@ -523,36 +491,36 @@ function myFunction(category) {
             <svg>
                 <use xlink:href="img/sprite.svg#icon-key"></use>
             </svg>
-            <p><strong>Tech_stack: </strong>{{ $project->tech_stack }}</p>
+            <p><strong>Tech_stack: </strong><?php echo e($project->tech_stack); ?></p>
         </div>
         <button class="btn-imgbtn home__btn">Contact realtor</button>
     </div>
 
-@endif
-@endforeach
-@endif
+<?php endif; ?>
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+<?php endif; ?>
 </section>`;
         break;
         case "reactjs":
             document.getElementById("project").innerHTML = ""; 
         console.log("reactjs clicked");
         document.getElementById("project").innerHTML =`<section class="homes">
-            @if(count($projects)>0)
+            <?php if(count($projects)>0): ?>
             
-            @foreach($projects as $project)
-   @if($project->tech_stack=='reactjs')
+            <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+   <?php if($project->tech_stack=='reactjs'): ?>
         <div class="home">
-        <img src='{{ $project->imgUrl }}' alt="House 1" class="home__img"> 
+        <img src='<?php echo e($project->imgUrl); ?>' alt="House 1" class="home__img"> 
         
         <svg class="home__like">
             <use xlink:href="img/sprite.svg#icon-heart-full"></use>
         </svg>
-        <h5 class="home__name">{{ $project->title }}</h5>
+        <h5 class="home__name"><?php echo e($project->title); ?></h5>
         <div class="home__location">
             <svg>
                 <use xlink:href="img/sprite.svg#icon-map-pin"></use>
             </svg>
-            <p><strong>Description: </strong>{{ $project->description }}</p>
+            <p><strong>Description: </strong><?php echo e($project->description); ?></p>
         </div>
 
         <div class="home__area">
@@ -565,14 +533,14 @@ function myFunction(category) {
             <svg>
                 <use xlink:href="img/sprite.svg#icon-key"></use>
             </svg>
-            <p><strong>Tech_stack: </strong>{{ $project->tech_stack }}</p>
+            <p><strong>Tech_stack: </strong><?php echo e($project->tech_stack); ?></p>
         </div>
         <button class="btn-imgbtn home__btn">Contact realtor</button>
     </div>
-@endif
+<?php endif; ?>
 
-@endforeach
-@endif
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+<?php endif; ?>
 </section>`
 ;
         break;
@@ -580,21 +548,21 @@ function myFunction(category) {
             document.getElementById("project").innerHTML = ""; 
             document.getElementById("project").innerHTML = ""; 
             document.getElementById("project").innerHTML =`<section class="homes">
-            @if(count($projects)>0)
-            @foreach($projects as $project)
-            @if($project->tech_stack=='nodejs')
+            <?php if(count($projects)>0): ?>
+            <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php if($project->tech_stack=='nodejs'): ?>
         <div class="home">
-         <img src='{{ $project->imgUrl }}' alt="House 1" class="home__img">
+         <img src='<?php echo e($project->imgUrl); ?>' alt="House 1" class="home__img">
         
         <svg class="home__like">
             <use xlink:href="img/sprite.svg#icon-heart-full"></use>
         </svg>
-        <h5 class="home__name">{{ $project->title }}</h5>
+        <h5 class="home__name"><?php echo e($project->title); ?></h5>
         <div class="home__location">
             <svg>
                 <use xlink:href="img/sprite.svg#icon-map-pin"></use>
             </svg>
-            <p><strong>Description: </strong>{{ $project->description }}</p>
+            <p><strong>Description: </strong><?php echo e($project->description); ?></p>
         </div>
 
         <div class="home__area">
@@ -607,36 +575,36 @@ function myFunction(category) {
             <svg>
                 <use xlink:href="img/sprite.svg#icon-key"></use>
             </svg>
-            <p><strong>Tech_stack: </strong>{{ $project->tech_stack }}</p>
+            <p><strong>Tech_stack: </strong><?php echo e($project->tech_stack); ?></p>
         </div>
         <button class="btn-imgbtn home__btn">Contact realtor</button>
     </div>
 
-@endif
-@endforeach
-@endif
+<?php endif; ?>
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+<?php endif; ?>
 </section>`;
         break;
         case "laravel":
             document.getElementById("project").innerHTML = ""; 
         console.log("reactjs clicked");
         document.getElementById("project").innerHTML =`<section class="homes">
-            @if(count($projects)>0)
+            <?php if(count($projects)>0): ?>
             
-            @foreach($projects as $project)
-   @if($project->tech_stack=='laravel')
+            <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+   <?php if($project->tech_stack=='laravel'): ?>
         <div class="home">
-        <img src='{{ $project->imgUrl }}' alt="House 1" class="home__img"> 
+        <img src='<?php echo e($project->imgUrl); ?>' alt="House 1" class="home__img"> 
         
         <svg class="home__like">
             <use xlink:href="img/sprite.svg#icon-heart-full"></use>
         </svg>
-        <h5 class="home__name">{{ $project->title }}</h5>
+        <h5 class="home__name"><?php echo e($project->title); ?></h5>
         <div class="home__location">
             <svg>
                 <use xlink:href="img/sprite.svg#icon-map-pin"></use>
             </svg>
-            <p><strong>Description: </strong>{{ $project->description }}</p>
+            <p><strong>Description: </strong><?php echo e($project->description); ?></p>
         </div>
 
         <div class="home__area">
@@ -649,14 +617,14 @@ function myFunction(category) {
             <svg>
                 <use xlink:href="img/sprite.svg#icon-key"></use>
             </svg>
-            <p><strong>Tech_stack: </strong>{{ $project->tech_stack }}</p>
+            <p><strong>Tech_stack: </strong><?php echo e($project->tech_stack); ?></p>
         </div>
         <button class="btn-imgbtn home__btn">Contact realtor</button>
     </div>
-@endif
+<?php endif; ?>
 
-@endforeach
-@endif
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+<?php endif; ?>
 </section>`
 ;
         console.log("nodejs clicked");
@@ -666,22 +634,22 @@ function myFunction(category) {
    
         console.log("reactjs clicked");
         document.getElementById("project").innerHTML =`<section class="homes">
-            @if(count($projects)>0)
+            <?php if(count($projects)>0): ?>
             
-            @foreach($projects as $project)
+            <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
         <div class="home">
-        <img src='{{ $project->imgUrl }}' alt="House 1" class="home__img"> 
+        <img src='<?php echo e($project->imgUrl); ?>' alt="House 1" class="home__img"> 
         
         <svg class="home__like">
             <use xlink:href="img/sprite.svg#icon-heart-full"></use>
         </svg>
-        <h5 class="home__name">{{ $project->title }}</h5>
+        <h5 class="home__name"><?php echo e($project->title); ?></h5>
         <div class="home__location">
             <svg>
                 <use xlink:href="img/sprite.svg#icon-map-pin"></use>
             </svg>
-            <p><strong>Description: </strong>{{ $project->description }}</p>
+            <p><strong>Description: </strong><?php echo e($project->description); ?></p>
         </div>
 
         <div class="home__area">
@@ -694,14 +662,14 @@ function myFunction(category) {
             <svg>
                 <use xlink:href="img/sprite.svg#icon-key"></use>
             </svg>
-            <p><strong>Tech_stack: </strong>{{ $project->tech_stack }}</p>
+            <p><strong>Tech_stack: </strong><?php echo e($project->tech_stack); ?></p>
         </div>
         <button class="btn-imgbtn home__btn">Contact realtor</button>
     </div>
 
 
-@endforeach
-@endif
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+<?php endif; ?>
 </section>`
 ;
         console.log("laravel clicked");
@@ -715,3 +683,4 @@ function myFunction(category) {
 </body>
 
 </html>
+<?php /**PATH C:\xampp\htdocs\portfolio\resources\views/portfolio/index.blade.php ENDPATH**/ ?>
