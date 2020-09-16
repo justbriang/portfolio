@@ -29,7 +29,7 @@ class ContactUSController extends Controller{
            ), function($message)
        {
            $message->from('saquib.gt@gmail.com');
-           $message->to('saquib.rizwan@cloudways.com', 'Admin');
+           $message->to('elizabeth.waeni.m@gmail.com', 'Admin');
        });
         return back()->with('success', 'Thanks for contacting us!'); 
        }

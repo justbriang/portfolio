@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Project;
 use App\Http\Resources\ProjectsResource;
-
+use Illuminate\Http\File;
+use Illuminate\Support\Facades\Storage;
 class ProjectsController extends Controller
 {
     /**
@@ -16,7 +17,8 @@ class ProjectsController extends Controller
     public function index()
     {
     $projects=Project::all();
-    return view('portfolio.dashboard')->with('posts', $projects);
+
+    return view('welcome')->with('projects', $projects);
     }
 
     /**
@@ -24,7 +26,7 @@ class ProjectsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create()
     {
         return view('portfolio.create');
     }
@@ -40,15 +42,32 @@ class ProjectsController extends Controller
         $request->validate([
             'title' => 'required|max:255',
             'description'=>'required|max:255',
-            'images'=>'required',
+            'image'=>'required',
             'tech_stack'=>'required|max:255'
-        ]);
-        $input = $request->all();
 
-        $project =create($input);
-        return (new ProjectsResource($project))
-            ->response()
-            ->setStatusCode(Response::HTTP_CREATED);//201
+        ]);
+
+
+
+$imagepath=$request->file('image')->store('images','s3');
+Storage::disk('s3')->setVisibility($imagepath,'public');
+//\$path = Storage::putFile('avatars', $request->file('avatar'));
+// return $imagepath;
+
+        // $project =create($input);
+       $project=new Project();
+       $project->title=$request->input('title');
+       $project->description=$request->input('description');
+       $project->imageName=Basename($imagepath);
+       $project->imgUrl=Storage::disk('s3')->url($imagepath);
+       $project->tech_stack=$request->input('tech_stack');
+       $project->save();
+
+       return redirect('/projects')->with('success', 'Post Created');
+
+        // return (new ProjectsResource($project))
+        //     ->response()
+        //     ->setStatusCode(Response::HTTP_CREATED);//201
     }
 
     /**

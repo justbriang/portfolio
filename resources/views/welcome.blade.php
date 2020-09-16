@@ -694,7 +694,7 @@
  
 
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects-section">
-	 <div class="row my-auto">
+	 <!-- <div class="row my-auto">
 	  <div class="col-12">
 	<div class="container-fluid px-md-0">
     		<div class="row no-gutters justify-content-center pb-5">
@@ -770,6 +770,45 @@
                   </a>
               </div> 
           </div>
+ -->
+
+          <section class="homes">
+        @if(count($projects)>0)
+
+            @foreach($projects as $project)
+
+            <div class="home">
+                <img src='{{ $project->imgUrl }}' alt="House 1" class="home__img">
+                <svg class="home__like">
+                    <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+                </svg>
+                <h5 class="home__name">{{ $project->title }}</h5>
+                <div class="home__location">
+                    <svg>
+                        <use xlink:href="img/sprite.svg#icon-map-pin"></use>
+                    </svg>
+                    <p><strong>Description: </strong>{{ $project->description }}</p>
+                </div>
+
+                <div class="home__area">
+                    <svg>
+                        <use xlink:href="img/sprite.svg#icon-expand"></use>
+                    </svg>
+                    <p></p>
+                </div>
+                <div class="home__price">
+                    <svg>
+                        <use xlink:href="img/sprite.svg#icon-key"></use>
+                    </svg>
+                    <p><strong>Tech_stack: </strong>{{ $project->tech_stack }}</p>
+                </div>
+                <button class="btn-imgbtn home__btn">Contact realtor</button>
+            </div>
+
+
+        @endforeach
+        @endif
+    </section>
 	
 	<!--
     	<div class="container-fluid px-md-0">
@@ -1167,7 +1206,7 @@
 <!--====================================================
                     PORTFOLIO MODALS
 ======================================================-->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true" >
+    <!-- <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true" >
       <div class="modal-dialog" role="document">
           <div class="modal-content">
               <div class="close-modal" data-dismiss="modal">
@@ -1626,7 +1665,7 @@
             </div>
             </div>
         </div>
-    </div>    
+    </div>     -->
 
   
 
