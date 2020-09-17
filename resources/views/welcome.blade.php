@@ -38,7 +38,7 @@
 	
   </head>
   
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" style="background-color:#D3D3D3;">
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" style="background-color:#F5FFFA;">
 	  
 	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
@@ -74,11 +74,11 @@
 								     class="txt-rotate"
 									
 								     data-period="2000"
-								     data-rotate='[ "Web Designer.", "Developer.", "Designer." ]'></span>
+								     data-rotate='[ "Web Designer.", "Developer.", "Researcher." ]'></span>
 								</h2>
 								<br>
 								
-									<h6 >Designing With Passion While Exploring The World...</h6>
+									<h6 >Predicting the future while creating it</h6>
 									<br>
 									<span class ="subheading"style="color:#556B2F" >More</span>
 							</div>
@@ -102,7 +102,7 @@
     			<div class="col-md-6 col-lg-6 d-flex">
     				<div class="img-about img d-flex align-items-stretch">
     					<div class="overlay"></div>
-	    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(images/about.jpg);">
+	    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(images/lizabout.jpg);">
 	    				</div>
     				</div>
     			</div>
@@ -125,40 +125,16 @@
 										<i class="fa fa-home" style="font-size:24px"></i> Nairobi, Kenya
 									</ul>
 									<br>
-			  <p><a href="#" class="btn btn-primary py-3 px-3"  >Download CV</a></p><br>
-              <ul class="list-inline list-social-icons mb-0">
-                  <li class="list-inline-item">
-                      <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-                  </li>
-                  <li class="list-inline-item">
-                      <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-                  </li>
-                  <li class="list-inline-item">
-                      <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-                  </li>
-                  <li class="list-inline-item">
-                      <a href="#">
+			  <!-- <p><a href="#" class="btn btn-primary py-3 px-3"  >View CV</a></p><br> -->
+             
+                  <!-- <li class="list-inline-item">
+                      <a href="https://github.com/Emutisya">
                   <span class="fa-stack fa-lg">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-github fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
-                  </li>
+                  </li> -->
               </ul>
           </div>
 	
@@ -228,9 +204,9 @@
     			<div class="col-md-3">
 				    <nav id="navi">
 					    <ul>
-					      <li ><a href="#page-1"><font color="#a9ba9d">Education</font></a></li>
-					      <li><a href="#page-2"><font color="#a9ba9d">Experience</font></a></li>
-					      <li><a href="#page-3"><font color="#a9ba9d">Skills</font></a></li>
+					      <li ><a href="#page-1"><font color="#556B2F">Education</font></a></li>
+					      <li><a href="#page-2"><font color="#556B2F">Work & Volunteer</font></a></li>
+					      <li><a href="#page-3"><font color="#556B2F">Skills</font></a></li>
 					 <!--     <li><a href="#page-4">Awards</a></li>-->
 					    </ul>
 					  </nav>
@@ -243,10 +219,10 @@
 					    		<span class="flaticon-ideas"></span>
 					    	</div>
 					    	<div class="text pl-3">
-		    					<span class="date" style="color:#a9ba9d">2018-present</span>
-		    					<h2>Bachelor of Science in Computer Science</h2>
+		    					<span class="date" style="color:#556B2F">2020-present</span>
+		    					<h2>Certified Ethical Hacking (C|EH)</h2>
 		    					<span class="position">Strathmore University</span>
-		    					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+		    					<p>This is a professional certification offered by the EC-Council (International Counsil of E-Commerce Consultants). It gives me hands-on experience on identifying ,counteracting, and preventing attacks. I will accomplish this on October 10th 2020.</p>
 	    					</div>
 	    				</div>
 	    				<div class="resume-wrap d-flex ftco-animate">
@@ -254,10 +230,10 @@
 					    		<span class="flaticon-ideas"></span>
 					    	</div>
 					    	<div class="text pl-3">
-		    					<span class="date" style="color:#a9ba9d">2018-present</span>
-		    					<h2>Computer Processing Systems/Computer Software</h2>
+		    					<span class="date" style="color:#556B2F">2018-present</span>
+		    					<h2>Bachelor of Science in Informatics and Computer Science</h2>
 		    					<span class="position">Strathmore University</span>
-		    					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+		    					<p>Computer science deals with theory of computation, algorithms, computational problems and the design of computer systems hardware, software and applications.</p>
 		    				</div>
 	    				</div>
 	    				<div class="resume-wrap d-flex ftco-animate">
@@ -265,10 +241,10 @@
 					    		<span class="flaticon-ideas"></span>
 					    	</div>
 					    	<div class="text pl-3">
-		    					<span class="date" style="color:#a9ba9d">2016-2017</span>
-		    					<h2>Diploma in Computer</h2>
-		    					<span class="position">Cambridge University</span>
-		    					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+		    					<span class="date" style="color:#556B2F">2018-present</span>
+		    					<h2>(ACCA) Association of Chartered Certified Accountants</h2>
+		    					<span class="position">Strathmore University</span>
+		    					<p>Accountancy Course </p>
 		    				</div>
 	    				</div>
 	    				<div class="resume-wrap d-flex ftco-animate">
@@ -276,28 +252,40 @@
 					    		<span class="flaticon-ideas"></span>
 					    	</div>
 					    	<div class="text pl-3">
-		    					<span class="date" style="color:#a9ba9d">2014-2018</span>
-		    					<h2>Art &amp; Creative Director</h2>
-		    					<span class="position">Cambridge University</span>
-		    					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+		    					<span class="date" style="color:#556B2F">2016</span>
+		    					<h2>Certificate in Android and web design</h2>
+		    					<span class="position">Zalego institute of technology KE</span>
+		    				
+		    				</div>
+	    				</div>
+
+              <div class="resume-wrap d-flex ftco-animate">
+	    					<div class="icon d-flex align-items-center justify-content-center">
+					    		<span class="flaticon-ideas"></span>
+					    	</div>
+					    	<div class="text pl-3">
+		    					<span class="date" style="color:#556B2F">2013-2017</span>
+		    					<h2>Kenya Certificate of Secondary Education</h2>
+		    					<span class="position">Naivasha Girls</span>
+		    				
 		    				</div>
 	    				</div>
 					  </div>
 
 					  <div id="page-2" class= "page two">
-					  	<h2 class="heading" >Experience</h2>
+					  	<h2 class="heading" >Work & Volunteer</h2>
 					    <div class="resume-wrap d-flex ftco-animate">
 					    	<div class="icon d-flex align-items-center justify-content-center">
 					    		<span class="flaticon-ideas"></span>
 					    	</div>
 					    	<div class="text pl-3">
-		    					<span class="date" style="color:#a9ba9d">2014-2015</span>
-		    					<h2>Software Developer</h2>
-		    					<span class="position">Cambridge University</span>
-		    					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+		    					<span class="date" style="color:#556B2F">January-March 2020</span>
+		    					<h2>Volunteer Work</h2>
+		    					<span class="position">AIESEC IN RWANDA</span>
+		    					<p>Designing a children's playground at Bethlehem Miracle Church, Kigali</p>
 		    				</div>
 	    				</div>
-	    				<div class="resume-wrap d-flex ftco-animate">
+	    				<!-- <div class="resume-wrap d-flex ftco-animate">
 	    					<div class="icon d-flex align-items-center justify-content-center">
 					    		<span class="flaticon-ideas"></span>
 					    	</div>
@@ -307,7 +295,7 @@
 		    					<h2>Web Designer</h2>
 		    					<span class="position">Cambridge University</span>
 		    					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-		    				</div>
+		    				</div>  -->
 	    	
 					  </div>
 					  <div id="page-3" class= "page three">
@@ -531,26 +519,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-md-6 animate-box">
-									<div class="progress-wrap ftco-animate">
-										<h3>WordPress</h3>
-										<div class="progress">
-										 	<div class="progress-bar color-5" role="progressbar" aria-valuenow="70"
-										  	aria-valuemin="0" aria-valuemax="100" style="width:70%">
-										    <span>70%</span>
-										  	</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-6 animate-box">
-									<div class="progress-wrap ftco-animate">
-										<h3>SEO</h3>
-										<div class="progress">
-										 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="80"
-										  	aria-valuemin="0" aria-valuemax="100" style="width:80%"; "color:#967117">
-										    <span>80%</span>
-										  	</div>
-										</div>
+								
 									</div>
 								</div>
 					  	</div>
@@ -616,8 +585,8 @@
     		<div class="row justify-content-center py-5 mt-5">
           <div class="col-md-12 heading-section text-center ftco-animate">
           	<h1 class="big big-2">Services</h1>
-            <h2 class="mb-4">What I Offer</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+            <h2 class="mb-4">What I can do for you...</h2>
+            <!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p> -->
           </div>
         </div>
     		<div class="row">
@@ -628,21 +597,11 @@
 							</span>
 							<div class="desc">
 								<h3 class="mb-5">Web Design</h3>
-								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+								<p>creation of a website with aesthetically pleasing factors like layout, user interface and other visual imagery in order to make the website more visually appealing and easy to use.</p>
 							</div>
 						</a>
 					</div>
-					<div class="col-md-4 text-center d-flex ftco-animate">
-						<a href="#" class="services-1 shadow">
-							<span class="icon">
-								<i class="flaticon-flasks"></i>
-							</span>
-							<div class="desc">
-								<h3 class="mb-5">Phtography</h3>
-								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-							</div>
-						</a>
-					</div>
+				
 					<div class="col-md-4 text-center d-flex ftco-animate">
 						<a href="#" class="services-1 shadow">
 							<span class="icon">
@@ -650,7 +609,7 @@
 							</span>
 							<div class="desc">
 								<h3 class="mb-5">Web Developer</h3>
-								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+								<p>coding or programming that enables website functionality, as per your requirements. Ranging from development of a simple single static page of plain text to complex Web-based Internet application</p>
 							</div>
 						</a>
 					</div>
@@ -662,7 +621,7 @@
 							</span>
 							<div class="desc">
 								<h3 class="mb-5">App Developing</h3>
-								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+								<p>Creation of computer applications for use on mobile devices such as tablets, smartphones and smart watches.</p>
 							</div>
 						</a>
 					</div>
@@ -672,47 +631,18 @@
 								<i class="flaticon-ux-design"></i>
 							</span>
 							<div class="desc">
-								<h3 class="mb-5">Branding</h3>
-								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+								<h3 class="mb-5">API Design</h3>
+								<p>Process of developing a software interface that exposes backend data and application functionality for use in new applications.</p>
 							</div>
 						</a>
 					</div>
-					<div class="col-md-4 text-center d-flex ftco-animate">
-						<a href="#" class="services-1 shadow">
-							<span class="icon">
-								<i class="flaticon-idea"></i>
-							</span>
-							<div class="desc">
-								<h3 class="mb-5">Product Strategy</h3>
-								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-							</div>
-						</a>
-					</div>
+				
 				</div>
     	</div>
     </section>
  
 
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects-section">
-	 <!-- <div class="row my-auto">
-	  <div class="col-12">
-	<div class="container-fluid px-md-0">
-    		<div class="row no-gutters justify-content-center pb-5">
-          <div class="col-md-12 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">My Projects</h2>
-	 <div class="row my-auto">
-             
-              <div class="col-md-12">
-                <div class="port-head-cont">
-                  <button class="btn btn-general btn-green filter-b" data-filter="all">All</button>
-                  <button class="btn btn-general btn-green filter-b" data-filter="consulting">Web Design</button>
-                  <button class="btn btn-general btn-green filter-b" data-filter="finance">Mobile Apps</button>
-                  <button class="btn btn-general btn-green filter-b" data-filter="marketing">Graphics Design</button> 
-                </div>
-              </div>
-          </div>
-          <div class="row my-auto">
+       <!--   <div class="row my-auto">
 		  
               <div class="col-sm-4 portfolio-item filter finance">
                   <a class="portfolio-link" href="#portfolioModal4" data-toggle="modal">
@@ -771,21 +701,56 @@
               </div> 
           </div>
  -->
- <section class=" u-margin-top-big">
+ <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects-section">
+
+
+
+ 
+  
+ <div class="row my-auto">
+	  <div class="col-12">
+	<div class="container-fluid px-md-0">
+    		<div class="row no-gutters justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">My Projects</h2>
+	 <div class="row my-auto">
+             
+              <div class="col-md-12">
+                <div class="port-head-cont">
+                  <button class="btn btn-general btn-green filter-b" onclick="myFunction('android')">android</button>
+                  <button class="btn btn-general btn-green filter-b" onclick="myFunction('laravel')">laravel</button>
+                  <button class="btn btn-general btn-green filter-b" onclick="myFunction('nodejs')">node js</button>
+                  <button class="btn btn-general btn-green filter-b" onclick="myFunction('reactjs')">react js</button>
+                </div>
+              </div>
+          </div>
+<!-- 
+ <div class="row my-auto">
+	  <div class="col-12">
+	<div class="container-fluid px-md-0">
+    		<div class="row no-gutters justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">My Projects</h2>
+	 <div class="row my-auto">
+             
+   <div class="col-md-12">
+                <div class="port-head-cont">
         <div class="row  ">
                 <div class="col-1-of-4">
-                <button class="btn-imgbtn home__btn" onclick="myFunction('android')">android</button>
+                <button class="btn btn-general btn-green filter-b" onclick="myFunction('android')">android</button>
                 </div>
                 <div class="col-1-of-4">
-                <button class="btn-imgbtn home__btn" onclick="myFunction('laravel')">laravel</button>
+                <button class="btn btn-general btn-green filter-b" onclick="myFunction('laravel')">laravel</button>
                 </div>
                 <div class="col-1-of-4">
-                <button class="btn-imgbtn home__btn" onclick="myFunction('nodejs')">node js</button>
+                <button class="btn btn-general btn-green filter-b" onclick="myFunction('nodejs')">node js</button>
                 </div>
                 <div class="col-1-of-4">
-                <button class="btn-imgbtn home__btn" onclick="myFunction('reactjs')">react js</button>
+                <button class="btn btn-general btn-green filter-b" onclick="myFunction('reactjs')">react js</button>
                 </div>
-            </div>
+            </div> -->
         </section>
     
         <section class="homes" id="project">
@@ -1026,9 +991,8 @@
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-7 ftco-animate text-center">
-						<h2>I'm <span>Available</span> for freelancing</h2>
-						<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-						<p class="mb-0"><a href="#" class="btn btn-primary py-3 px-5">Hire me</a></p>
+						<h2>I'm also <span>Available</span> for freelancing</h2>
+						
 					</div>
 				</div>
 			</div>
@@ -1065,7 +1029,7 @@
           		</div>
           		<div>
 	          		<h3 class="mb-4">Contact Number</h3>
-		            <p><a href="tel://1234567920">+ 254713021636</a></p>
+		            <p> +254713021636</p>
 	            </div>
 	          </div>
           </div>
@@ -1086,7 +1050,7 @@
         </div>
   
 <!--====================================================
-                    COMMENTS
+                    CONTACT ME
 ======================================================-->
         <div class="row no-gutters block-9">
           <div class="col-md-6 order-md-last d-flex">
@@ -1121,7 +1085,7 @@
 <span class="text-danger">{{ $errors->first('message') }}</span>
 </div>
 <div class="form-group">
-<button class="btn btn-primary py-3 px-5">Contact US!</button>
+<button class="btn btn-primary py-3 px-5">Contact Me!</button>
 </div>
 {!! Form::close() !!}
 </div>
@@ -1149,12 +1113,12 @@
           </div>
 
           <div class="col-md-6 d-flex">
-          	<div class="img" style="background-image: url(images/about.jpg);"></div>
+          	<div class="img" style="background-image: url(images/liz.jpg);"></div>
 
           </div>
         </div>
 		
-		  			<img src="assets/img/gallery/sin.png" alt="">
+		  			<!-- <img src="assets/img/gallery/sin.png" alt=""> -->
       </div>
     </section>
 		
@@ -1164,8 +1128,8 @@
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">About</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <!-- <h2 class="ftco-heading-2">About</h2> -->
+              <p>Alone we can do so little; together we can do so much. Let's work together and build an empire.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -1173,27 +1137,16 @@
               </ul>
             </div>
           </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Links</h2>
-              <ul class="list-unstyled">
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Services</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
-              </ul>
-            </div>
-          </div>
+          
           <div class="col-md">
              <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Services</h2>
               <ul class="list-unstyled">
                 <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Design</a></li>
                 <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Development</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Business Strategy</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Data Analysis</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Graphic Design</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>App Development</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>API Design</a></li>
+               
               </ul>
             </div>
           </div>
@@ -1202,9 +1155,9 @@
             	<h2 class="ftco-heading-2">Have a Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Nairobi, Kenya</span></li>
+	                <li><span class="icon icon-phone"></span><span class="text">+254 713021636</span></li>
+	                <li><span class="icon icon-envelope"></span><span class="text">elizabeth.waeni.m@gmail.com</span></li>
 	              </ul>
 	            </div>
             </div>
