@@ -771,44 +771,61 @@
               </div> 
           </div>
  -->
-
-          <section class="homes">
-        @if(count($projects)>0)
-
+ <section class=" u-margin-top-big">
+        <div class="row  ">
+                <div class="col-1-of-4">
+                <button class="btn-imgbtn home__btn" onclick="myFunction('android')">android</button>
+                </div>
+                <div class="col-1-of-4">
+                <button class="btn-imgbtn home__btn" onclick="myFunction('laravel')">laravel</button>
+                </div>
+                <div class="col-1-of-4">
+                <button class="btn-imgbtn home__btn" onclick="myFunction('nodejs')">node js</button>
+                </div>
+                <div class="col-1-of-4">
+                <button class="btn-imgbtn home__btn" onclick="myFunction('reactjs')">react js</button>
+                </div>
+            </div>
+        </section>
+    
+        <section class="homes" id="project">
+            @if(count($projects)>0)
+            
             @foreach($projects as $project)
 
-            <div class="home">
-                <img src='{{ $project->imgUrl }}' alt="House 1" class="home__img">
-                <svg class="home__like">
-                    <use xlink:href="img/sprite.svg#icon-heart-full"></use>
-                </svg>
-                <h5 class="home__name">{{ $project->title }}</h5>
-                <div class="home__location">
-                    <svg>
-                        <use xlink:href="img/sprite.svg#icon-map-pin"></use>
-                    </svg>
-                    <p><strong>Description: </strong>{{ $project->description }}</p>
-                </div>
+        <div class="home">
+        <img src='{{ $project->imgUrl }}' alt="House 1" class="home__img"> 
+        
+        <svg class="home__like">
+            <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+        </svg>
+        <h5 class="home__name">{{ $project->title }}</h5>
+        <div class="home__location">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-map-pin"></use>
+            </svg>
+            <p><strong>Description: </strong>{{ $project->description }}</p>
+        </div>
 
-                <div class="home__area">
-                    <svg>
-                        <use xlink:href="img/sprite.svg#icon-expand"></use>
-                    </svg>
-                    <p></p>
-                </div>
-                <div class="home__price">
-                    <svg>
-                        <use xlink:href="img/sprite.svg#icon-key"></use>
-                    </svg>
-                    <p><strong>Tech_stack: </strong>{{ $project->tech_stack }}</p>
-                </div>
-                <button class="btn-imgbtn home__btn">Contact realtor</button>
-            </div>
+        <div class="home__area">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-expand"></use>
+            </svg>
+            <p></p>
+        </div>
+        <div class="home__price">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-key"></use>
+            </svg>
+            <p><strong>Tech_stack: </strong>{{ $project->tech_stack }}</p>
+        </div>
+        <button class="btn-imgbtn home__btn">Contact realtor</button>
+    </div>
 
 
-        @endforeach
-        @endif
-    </section>
+@endforeach
+@endif
+</section>
 	
 	<!--
     	<div class="container-fluid px-md-0">
@@ -1688,5 +1705,231 @@
   
   <script src="js/main.js"></script>
     
+
+
+  <script>
+function myFunction(category) {
+    // document.getElementById("demo").style.color = "red";
+    switch(category){
+        case "android":
+            document.getElementById("project").innerHTML = ""; 
+            document.getElementById("project").innerHTML =`<section class="homes">
+            @if(count($projects)>0)
+            @foreach($projects as $project)
+            @if($project->tech_stack=='android')
+        <div class="home">
+         <img src='{{ $project->imgUrl }}' alt="House 1" class="home__img">
+        
+        <svg class="home__like">
+            <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+        </svg>
+        <h5 class="home__name">{{ $project->title }}</h5>
+        <div class="home__location">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-map-pin"></use>
+            </svg>
+            <p><strong>Description: </strong>{{ $project->description }}</p>
+        </div>
+
+        <div class="home__area">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-expand"></use>
+            </svg>
+            <p></p>
+        </div>
+        <div class="home__price">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-key"></use>
+            </svg>
+            <p><strong>Tech_stack: </strong>{{ $project->tech_stack }}</p>
+        </div>
+        <button class="btn-imgbtn home__btn">Contact realtor</button>
+    </div>
+
+@endif
+@endforeach
+@endif
+</section>`;
+        break;
+        case "reactjs":
+            document.getElementById("project").innerHTML = ""; 
+        console.log("reactjs clicked");
+        document.getElementById("project").innerHTML =`<section class="homes">
+            @if(count($projects)>0)
+            
+            @foreach($projects as $project)
+   @if($project->tech_stack=='reactjs')
+        <div class="home">
+        <img src='{{ $project->imgUrl }}' alt="House 1" class="home__img"> 
+        
+        <svg class="home__like">
+            <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+        </svg>
+        <h5 class="home__name">{{ $project->title }}</h5>
+        <div class="home__location">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-map-pin"></use>
+            </svg>
+            <p><strong>Description: </strong>{{ $project->description }}</p>
+        </div>
+
+        <div class="home__area">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-expand"></use>
+            </svg>
+            <p></p>
+        </div>
+        <div class="home__price">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-key"></use>
+            </svg>
+            <p><strong>Tech_stack: </strong>{{ $project->tech_stack }}</p>
+        </div>
+        <button class="btn-imgbtn home__btn">Contact realtor</button>
+    </div>
+@endif
+
+@endforeach
+@endif
+</section>`
+;
+        break;
+        case "nodejs":
+            document.getElementById("project").innerHTML = ""; 
+            document.getElementById("project").innerHTML = ""; 
+            document.getElementById("project").innerHTML =`<section class="homes">
+            @if(count($projects)>0)
+            @foreach($projects as $project)
+            @if($project->tech_stack=='nodejs')
+        <div class="home">
+         <img src='{{ $project->imgUrl }}' alt="House 1" class="home__img">
+        
+        <svg class="home__like">
+            <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+        </svg>
+        <h5 class="home__name">{{ $project->title }}</h5>
+        <div class="home__location">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-map-pin"></use>
+            </svg>
+            <p><strong>Description: </strong>{{ $project->description }}</p>
+        </div>
+
+        <div class="home__area">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-expand"></use>
+            </svg>
+            <p></p>
+        </div>
+        <div class="home__price">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-key"></use>
+            </svg>
+            <p><strong>Tech_stack: </strong>{{ $project->tech_stack }}</p>
+        </div>
+        <button class="btn-imgbtn home__btn">Contact realtor</button>
+    </div>
+
+@endif
+@endforeach
+@endif
+</section>`;
+        break;
+        case "laravel":
+            document.getElementById("project").innerHTML = ""; 
+        console.log("reactjs clicked");
+        document.getElementById("project").innerHTML =`<section class="homes">
+            @if(count($projects)>0)
+            
+            @foreach($projects as $project)
+   @if($project->tech_stack=='laravel')
+        <div class="home">
+        <img src='{{ $project->imgUrl }}' alt="House 1" class="home__img"> 
+        
+        <svg class="home__like">
+            <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+        </svg>
+        <h5 class="home__name">{{ $project->title }}</h5>
+        <div class="home__location">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-map-pin"></use>
+            </svg>
+            <p><strong>Description: </strong>{{ $project->description }}</p>
+        </div>
+
+        <div class="home__area">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-expand"></use>
+            </svg>
+            <p></p>
+        </div>
+        <div class="home__price">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-key"></use>
+            </svg>
+            <p><strong>Tech_stack: </strong>{{ $project->tech_stack }}</p>
+        </div>
+        <button class="btn-imgbtn home__btn">Contact realtor</button>
+    </div>
+@endif
+
+@endforeach
+@endif
+</section>`
+;
+        console.log("nodejs clicked");
+        break;
+        default:
+        document.getElementById("project").innerHTML = ""; 
+   
+        console.log("reactjs clicked");
+        document.getElementById("project").innerHTML =`<section class="homes">
+            @if(count($projects)>0)
+            
+            @foreach($projects as $project)
+
+        <div class="home">
+        <img src='{{ $project->imgUrl }}' alt="House 1" class="home__img"> 
+        
+        <svg class="home__like">
+            <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+        </svg>
+        <h5 class="home__name">{{ $project->title }}</h5>
+        <div class="home__location">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-map-pin"></use>
+            </svg>
+            <p><strong>Description: </strong>{{ $project->description }}</p>
+        </div>
+
+        <div class="home__area">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-expand"></use>
+            </svg>
+            <p></p>
+        </div>
+        <div class="home__price">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-key"></use>
+            </svg>
+            <p><strong>Tech_stack: </strong>{{ $project->tech_stack }}</p>
+        </div>
+        <button class="btn-imgbtn home__btn">Contact realtor</button>
+    </div>
+
+
+@endforeach
+@endif
+</section>`
+;
+        console.log("laravel clicked");
+        break;
+
+    }
+
+
+}
+</script>
+
   </body>
 </html>
