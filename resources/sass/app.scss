@@ -1,7 +1,7 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 // Variables
-@import 'variables';
+
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 @import "abstracts/functions";
@@ -9,17 +9,20 @@
 @import "abstracts/variables";
 @import "base/animations";
 @import "base/base";
+@import "base/miscellaneous";
 @import "base/typography";
 @import "base/utilities";
+@import "base/responsive";
 @import "components/bg-video";
 @import "components/button";
-@import "components/card";
+
+@import "components/gallery";
 @import "components/composition";
 @import "components/homes";
 @import "components/feature-box";
-@import "components/form";
 @import "components/popup";
-@import "components/story";
+
+@import "components/spacing";
 @import "layout/footer";
 @import "layout/grid";
 @import "layout/header";

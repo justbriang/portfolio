@@ -1,4 +1,5 @@
 .navigation {
+    backface-visibility: hidden;
     &__checkbox {
         display: none;
     }

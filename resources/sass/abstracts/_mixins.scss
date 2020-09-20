@@ -12,3 +12,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+@mixin transition($property: all, $duration: 300ms, $animate: linear, $delay:0s){
+    transition: $property $duration $animate $delay; 
+}

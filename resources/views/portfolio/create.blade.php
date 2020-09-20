@@ -31,17 +31,3 @@
 {{Form::submit('Post Vacancy',['class'=>'btn btn-primary'])}}
 {!! Form::close() !!}
 <div class="row">
-<p>hehehehedecec</p>
-                <div class="col-1-of-4">
-                <button class="btn success" onclick="myFunction()">android</button>
-                </div>
-                <div class="col-1-of-4">
-                <button class="btn success" onclick="myFunction()">laravel</button>
-                </div>
-                <div class="col-1-of-4">
-                <button class="btn success" onclick="myFunction()">node js</button>
-                </div>
-                <div class="col-1-of-4">
-                <button class="btn success" onclick="myFunction()">react js</button>
-                </div>
-            </div>

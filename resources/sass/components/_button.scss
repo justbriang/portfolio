@@ -77,23 +77,33 @@
             box-shadow: 0 1rem 2rem rgba($color-black, .15);
             transform: translateY(-2px);
         }
-        &:active {
+        &:active  {
             box-shadow: 0 .5rem 1rem rgba($color-black, .15);
             transform: translateY(0);
         }
+     
     }
 
-    .btn-imgbtn {
-        background-color: $color-primary-1;
-        color: #fff;
-        border: none;
-        border-radius: 0;
+    .btn1-imgbtn {
+        background-color: transparent;
+        color: #55c57a;
+        border: #55c57a solid .1rem;
         font-size: 1.5rem;
+        border-radius: 10rem;
         text-transform: uppercase;
-        padding: 1.8rem 3rem;
+        padding: 0 3rem;
         cursor: pointer;
         transition: all .2s;
         &:hover {
-            background-color: $color-primary-dark;
+            background-color: #55c57a;
+            color: #fff;
+        }
+        &:focus {
+            background-color: #55c57a;
+            color: #fff;
+            outline: none;
+            box-shadow: 0 .5rem 1rem rgba(transparent, .2);
         }
     }
+/* :: 6.0 Buttons CSS */
+

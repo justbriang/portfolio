@@ -21,3 +21,87 @@ $default-font-size: 1.6rem;
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-horizontal: 6rem;
+// Heading Color
+$heading: #252525;
+
+// Text Color
+$text: #636363;
+
+// Text Dark
+$text-dark: #161715;
+
+// Text Gray
+$text-gray: #625b66;
+
+// Gray Background
+$bg-gray: #f7f7f7;
+
+// Primary Color
+$primary: #fc6060;
+
+// White Color
+$white: #ffffff;
+
+// Dark Color
+$dark: #000000;
+
+// Hover Color
+$hover: #fc6060;
+
+// Secondary Color
+$secondary: #afb4bf;
+
+// Dark 2 Color
+$dark2: #0e2737;
+
+// Border Color
+$border: #ebebeb;
+
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Colors
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66d9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+/*font Variables*/
+$rob: 'Roboto', sans-serif;
+$hee: 'Heebo', sans-serif;
+
+
+/*Color Variables*/
+$baseColor: #766dff;
+$dip: #222222;
+$pfont: #777777; 
+
+
+/*=================== fonts ====================*/
+@import url('https://fonts.googleapis.com/css?family=Heebo:300,400,700,900|Roboto:300,400,500,700');
+
+// Mixins
+
+
+// Placeholder Mixins
+
+@mixin placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+
+
+
