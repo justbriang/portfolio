@@ -135,7 +135,7 @@
 
                  
               </div>
-              <p class="mb-5" style="max-width: 500px;" >My name is Elizabeth, I live in Nairobi but i call many places my home. Currently i'm pursuing Computer Science at Strathmore University. I am passionate about Databases, Software Engineering, Web and Android Development. I always try to enrich my academic path with other activities such as volunteer work and associativism within the university.</p>
+              <p class="mb-5" style="max-width: 500px;" >My name is Elizabeth, I live in Nairobi but i call many places my home. Currently i'm pursuing Computer Science at Strathmore University.I am proficient in Android development and web design, I am also passionate about Databases and Software Engineering. In addition to this I can comfortably work in teams as i enjoy getting more insight. I always try to enrich my academic path with other activities such as volunteer work and associativism within the university. I'm still learning and practicing so as to improve my skills.</p>
 			  <ul class="list basic_info">
 		
 										<i class="fa fa-calendar" style="font-size:24px ";></i> 1st April, 2000<br>
@@ -145,7 +145,14 @@
 									</ul>
 									<br>
 			  <!-- <p><a href="#" class="btn btn-primary py-3 px-3"  >View CV</a></p><br> -->
-             
+        <div  class="socialbtns">
+<ul>
+<li><a href="#" class="fa fa-lg fa-facebook"></a></li>
+<li><a href="#" class="fa fa-lg fa-twitter"></a></li>
+<li><a href="#" class="fa fa-lg fa-github"></a></li>
+<li><a href="#" class="fa fa-lg fa-linkedin"></a></li>
+<li><a href="#" class="fa fa-lg fa-instagram"></a>
+</div>
                   <!-- <li class="list-inline-item">
                       <a href="https://github.com/Emutisya">
                   <span class="fa-stack fa-lg">
@@ -217,17 +224,17 @@
     	</div>
     </section>
 -->
-    <section class="ftco-section ftco-no-pb goto-here" id="resume-section">
+<section class="ftco-section ftco-no-pb goto-here" id="resume-section">
     	<div class="container">
-    		<div class="row"><ul>
+    		<div class="row">
+    			<div class="col-md-3">
+				    <nav id="navi">
+					    <ul>
 					      <li ><a href="#page-1"><font color="#556B2F">Education</font></a></li>
 					      <li><a href="#page-2"><font color="#556B2F">Work & Volunteer</font></a></li>
 					      <li><a href="#page-3"><font color="#556B2F">Skills</font></a></li>
 					 <!--     <li><a href="#page-4">Awards</a></li>-->
-					    </ul>
-    			<div class="col-md-3">
-				    <nav id="navi">
-					    
+           </ul>
 					  </nav>
 					</div>
 					<div class="col-md-9">
@@ -526,20 +533,39 @@
 										  	</div>
 										</div>
 									</div>
-								</div>
-								<div class="col-md-6 animate-box">
+                </div>
+                <div class="col-md-6 animate-box">
 									<div class="progress-wrap ftco-animate">
-										<h3>NetBeans</h3>
+										<h3>Netbeans</h3>
 										<div class="progress">
-										 	<div class="progress-bar color-4" role="progressbar" aria-valuenow="90"
+										 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="95"
 										  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
 										    <span>90%</span>
 										  	</div>
 										</div>
 									</div>
 								</div>
+								<div class="col-md-6 animate-box">
+									<div class="progress-wrap ftco-animate">
+										<h3>GitHub || Collaboration</h3>
+										<div class="progress">
+										 	<div class="progress-bar color-4" role="progressbar" aria-valuenow="90"
+										  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                        <span>95%</span>
+                        
+                        </div>
+                      
+                    </div><br>
+                    <h6>I have been using Github for about two years now and i can comfortablly host, review code and manage projects as well make branches and perform merging.</h6> 
+                  </div>
+                  
+								</div>
 								
-									</div>
+                  </div>
+                  <!-- <span class="subheading"><b>Collaboration || Git</b></span><br><br>
+                 
+                  <h6>I have been using Github for about two years now and i can comfortablly host, review code and manage projects as well make branches and perform merging.</h6> -->
+
 								</div>
 					  	</div>
 					  </div>
