@@ -77,10 +77,18 @@
 
     }
     .imge{
-      background: url(/public/img/about.jpg) !important;
-      background-size: 100%;
-      background-size: cover;
-      background-position: top;
+    //   background: url(/img/about.jpg) !important;
+  
+
+    
+height: 100%;
+margin: auto;
+justify-content: center;
+align-items: center;
+align-content: center;
+overflow: hidden;
+      
+    
     }
 }
 .btns{

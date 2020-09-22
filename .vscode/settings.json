@@ -1,0 +1,12 @@
+{
+    "blade.format.enable": true,
+    "launch": {
+
+        "configurations": [],
+        "compounds": []
+    },
+    "[blade]": {
+        "editor.defaultFormatter": "onecentlin.laravel-blade",
+        "editor.formatOnSave": true
+    }
+}

@@ -11555,7 +11555,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 2rem;
-  color: #ff0;
+  color: #55c57a;
 }
 
 .container .box .details .content .desc {
@@ -12182,10 +12182,12 @@ body {
 }
 
 .contact .imge {
-  background: url(/public/img/about.jpg) !important;
-  background-size: 100%;
-  background-size: cover;
-  background-position: top;
+  height: 100%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  overflow: hidden;
 }
 
 .btns {

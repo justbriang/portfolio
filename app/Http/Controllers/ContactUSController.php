@@ -35,12 +35,13 @@ class ContactUSController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [ 'name' => 'required', 'email' => 'required|email', 'subject' => 'required','message' => 'required' ]);
+        $this->validate($request, [ 'firstname' => 'required', 'email' => 'required|email', 'subject' => 'required','message' => 'required' ]);
+       // dd($request->all());
         ContactUS::create($request->all());
 
         Mail::send('email',
            array(
-               'name' => $request->get('name'),
+               'name' => $request->get('firstname'),
                'email' => $request->get('email'),
                'subject' => $request->get('subject'),
                'user_message' => $request->get('message')
