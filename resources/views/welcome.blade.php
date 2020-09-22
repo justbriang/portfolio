@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css" rel="stylesheet">
-	
+    <link rel="stylesheet" href="css/app.css" rel="stylesheet">
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
@@ -32,17 +32,36 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/devicons/css/devicons.min.css" rel="stylesheet">
     <link href="css/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="images/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
   
 	
 	
 	
   </head>
   
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" style="background-color:#F5FFFA;">
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" style="background-color:#F8F8FF;">
 	  
 	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 	    <div class="container">
+      
 	      <a class="navbar-brand" href="index.html"><span >E </span>Mutisya</a>
 	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
@@ -200,15 +219,15 @@
 -->
     <section class="ftco-section ftco-no-pb goto-here" id="resume-section">
     	<div class="container">
-    		<div class="row">
-    			<div class="col-md-3">
-				    <nav id="navi">
-					    <ul>
+    		<div class="row"><ul>
 					      <li ><a href="#page-1"><font color="#556B2F">Education</font></a></li>
 					      <li><a href="#page-2"><font color="#556B2F">Work & Volunteer</font></a></li>
 					      <li><a href="#page-3"><font color="#556B2F">Skills</font></a></li>
 					 <!--     <li><a href="#page-4">Awards</a></li>-->
 					    </ul>
+    			<div class="col-md-3">
+				    <nav id="navi">
+					    
 					  </nav>
 					</div>
 					<div class="col-md-9">
@@ -591,7 +610,7 @@
         </div>
     		<div class="row">
 					<div class="col-md-4 text-center d-flex ftco-animate">
-						<a href="#" class="services-1 shadow">
+						<a href="" class="services-1 shadow">
 							<span class="icon">
 								<i class="flaticon-analysis"></i>
 							</span>
@@ -753,43 +772,51 @@
             </div> -->
         </section>
     
-        <section class="homes" id="project">
+        <section id="project">
+        <section class="homes" >
+           
             @if(count($projects)>0)
             
             @foreach($projects as $project)
+            <div class="container1">
+                <div class="box">
+                    <div class="imgbox">
+                    <img src='{{ $project->imgUrl}}' alt="House 1" class="imgp "> 
+                    </div>
+                    <div class="details">
+                        <div class="content">
+                        <h5 class="heading">{{ $project->title }}</h5>
+                    <p> 1class="desc">{{ $project->description }}</p> 
+                    
+            <a href='' class="btn btn--white btn--animated">Get in touch</a>
+                    </div>
+                </div>
+                </div>
+            </div>
 
-        <div class="home">
-        <img src='{{ $project->imgUrl }}' alt="House 1" class="home__img"> 
+        <!-- <div class="home">
+         <img src='{{ $project->imgUrl }}' alt="House 1" class="home__img "> 
         
-        <svg class="home__like">
-            <use xlink:href="img/sprite.svg#icon-heart-full"></use>
-        </svg>
+      
         <h5 class="home__name">{{ $project->title }}</h5>
-        <div class="home__location">
-            <svg>
-                <use xlink:href="img/sprite.svg#icon-map-pin"></use>
-            </svg>
+        </div> -->
+        <!-- <div class="home__location">
+          
             <p><strong>Description: </strong>{{ $project->description }}</p>
         </div>
 
-        <div class="home__area">
-            <svg>
-                <use xlink:href="img/sprite.svg#icon-expand"></use>
-            </svg>
-            <p></p>
-        </div>
+      
         <div class="home__price">
-            <svg>
-                <use xlink:href="img/sprite.svg#icon-key"></use>
-            </svg>
-            <p><strong>Tech_stack: </strong>{{ $project->tech_stack }}</p>
+           <p><strong>Tech_stack: </strong>{{ $project->tech_stack }}</p>
         </div>
-        <button class="btn-imgbtn home__btn">Contact realtor</button>
-    </div>
+        <button class="btn1-imgbtn home__btn">Repository</button> -->
+    
+
 
 
 @endforeach
 @endif
+
 </section>
 	
 	<!--
