@@ -356,19 +356,19 @@ Frameworks:  ASP.NET MVC jQuery, jQuery UI<br><br>
         <section id="project">
             <section class="homes">
 
-                @if(count($projects)>0)
+                <?php if(count($projects)>0): ?>
 
-                @foreach($projects as $project)
+                <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <div class="container">
                     <div class="box">
                         <div class="imgbox">
 
-                            <img src='{{ $project->imgUrl}}' alt="House 1" class="imgp ">
+                            <img src='<?php echo e($project->imgUrl); ?>' alt="House 1" class="imgp ">
                         </div>
                         <div class="details">
                             <div class="content">
-                                <h5 class="heading">{{ $project->title }}</h5>
-                                <p class="desc">{{ $project->description }}</p>
+                                <h5 class="heading"><?php echo e($project->title); ?></h5>
+                                <p class="desc"><?php echo e($project->description); ?></p>
 
                                 <p>+</p>
                             </div>
@@ -379,8 +379,8 @@ Frameworks:  ASP.NET MVC jQuery, jQuery UI<br><br>
 
 
 
-                @endforeach
-                @endif
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                <?php endif; ?>
 
             </section>
         </section>
@@ -393,53 +393,65 @@ Frameworks:  ASP.NET MVC jQuery, jQuery UI<br><br>
             </div>
             <div class="row">
                 <div class="col-1-of-2">
-                    @if(Session::has('success'))
+                    <?php if(Session::has('success')): ?>
                     <div class="alert alert-success">
-                        {{ Session::get('success') }}
+                        <?php echo e(Session::get('success')); ?>
+
                     </div>
-                    @endif
-                    {!! Form::open(['route'=>'contact-us.store']) !!}
+                    <?php endif; ?>
+                    <?php echo Form::open(['route'=>'contact-us.store']); ?>
+
                     <div class="form-row">
                         <div class="col">
-                            <div class="form-group {{ $errors->has('firstname') ? 'has-error' : '' }}">
-                                {!! Form::label('Name:') !!}
-                                {!! Form::text('firstname', old('firstname'), ['class'=>'form-control', 'placeholder'=>'Enter
-                                Firstname']) !!}
-                                <span class="text-danger">{{ $errors->first('firstname') }}</span>
+                            <div class="form-group <?php echo e($errors->has('firstname') ? 'has-error' : ''); ?>">
+                                <?php echo Form::label('Name:'); ?>
+
+                                <?php echo Form::text('firstname', old('firstname'), ['class'=>'form-control', 'placeholder'=>'Enter
+                                Firstname']); ?>
+
+                                <span class="text-danger"><?php echo e($errors->first('firstname')); ?></span>
                             </div>
                         </div>
                         <div class="col">
-                            <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
-                                {!! Form::label('Name:') !!}
-                                {!! Form::text('lastname', old('name'), ['class'=>'form-control', 'placeholder'=>'Enter
-                                Lastname']) !!}
-                                <span class="text-danger">{{ $errors->first('name') }}</span>
+                            <div class="form-group <?php echo e($errors->has('name') ? 'has-error' : ''); ?>">
+                                <?php echo Form::label('Name:'); ?>
+
+                                <?php echo Form::text('lastname', old('name'), ['class'=>'form-control', 'placeholder'=>'Enter
+                                Lastname']); ?>
+
+                                <span class="text-danger"><?php echo e($errors->first('name')); ?></span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
-                        {!! Form::label('Email:') !!}
-                        {!! Form::text('email', old('email'), ['class'=>'form-control', 'placeholder'=>'Enter Email'])
-                        !!}
-                        <span class="text-danger">{{ $errors->first('email') }}</span>
+                    <div class="form-group <?php echo e($errors->has('email') ? 'has-error' : ''); ?>">
+                        <?php echo Form::label('Email:'); ?>
+
+                        <?php echo Form::text('email', old('email'), ['class'=>'form-control', 'placeholder'=>'Enter Email']); ?>
+
+                        <span class="text-danger"><?php echo e($errors->first('email')); ?></span>
                     </div>
-                    <div class="form-group {{ $errors->has('subject') ? 'has-error' : '' }}">
-                        {!! Form::label('Subject:') !!}
-                        {!! Form::text('subject', old('subject'), ['class'=>'form-control', 'placeholder'=>'Enter
-                        Subject']) !!}
-                        <span class="text-danger">{{ $errors->first('name') }}</span>
+                    <div class="form-group <?php echo e($errors->has('subject') ? 'has-error' : ''); ?>">
+                        <?php echo Form::label('Subject:'); ?>
+
+                        <?php echo Form::text('subject', old('subject'), ['class'=>'form-control', 'placeholder'=>'Enter
+                        Subject']); ?>
+
+                        <span class="text-danger"><?php echo e($errors->first('name')); ?></span>
                     </div>
-                    <div class="form-group {{ $errors->has('message') ? 'has-error' : '' }}">
-                        {!! Form::label('Message:') !!}
-                        {!! Form::textarea('message', old('message'), ['class'=>'form-control', 'placeholder'=>'Enter
-                        Message']) !!}
-                        <span class="text-danger">{{ $errors->first('message') }}</span>
+                    <div class="form-group <?php echo e($errors->has('message') ? 'has-error' : ''); ?>">
+                        <?php echo Form::label('Message:'); ?>
+
+                        <?php echo Form::textarea('message', old('message'), ['class'=>'form-control', 'placeholder'=>'Enter
+                        Message']); ?>
+
+                        <span class="text-danger"><?php echo e($errors->first('message')); ?></span>
                     </div>
                     <div class="form-group">
                         <button class="btn btn-primary py-3 px-5">Contact US!</button>
                     </div>
-                    {!! Form::close() !!}
+                    <?php echo Form::close(); ?>
+
                 </div>
 
                 <div class="col-1-of-2 ">
@@ -557,18 +569,18 @@ Frameworks:  ASP.NET MVC jQuery, jQuery UI<br><br>
         case "android":
             document.getElementById("project").innerHTML = ""; 
             document.getElementById("project").innerHTML =`<section class="homes">
-            @if(count($projects)>0)
-            @foreach($projects as $project)
-            @if($project->tech_stack=='android')
+            <?php if(count($projects)>0): ?>
+            <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php if($project->tech_stack=='android'): ?>
             <div class="container">
                 <div class="box">
                     <div class="imgbox">
-                    <img src='{{ $project->imgUrl}}' alt="House 1" class="imgp "> 
+                    <img src='<?php echo e($project->imgUrl); ?>' alt="House 1" class="imgp "> 
                     </div>
                     <div class="details">
                         <div class="content">
-                        <h5 class="heading">{{ $project->title }}</h5>
-                    <p class="desc">{{ $project->description }}</p> 
+                        <h5 class="heading"><?php echo e($project->title); ?></h5>
+                    <p class="desc"><?php echo e($project->description); ?></p> 
                     
                         <p>+</p>
                     </div>
@@ -576,38 +588,38 @@ Frameworks:  ASP.NET MVC jQuery, jQuery UI<br><br>
                 </div>
             </div>
 
-@endif
-@endforeach
-@endif
+<?php endif; ?>
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+<?php endif; ?>
 </section>`;
         break;
         case "reactjs":
             document.getElementById("project").innerHTML = ""; 
         console.log("reactjs clicked");
         document.getElementById("project").innerHTML =`<section class="homes">
-            @if(count($projects)>0)
+            <?php if(count($projects)>0): ?>
             
-            @foreach($projects as $project)
-   @if($project->tech_stack=='reactjs')
+            <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+   <?php if($project->tech_stack=='reactjs'): ?>
    <div class="container">
                 <div class="box">
                     <div class="imgbox">
-                    <img src='{{ $project->imgUrl}}' alt="House 1" class="imgp "> 
+                    <img src='<?php echo e($project->imgUrl); ?>' alt="House 1" class="imgp "> 
                     </div>
                     <div class="details">
                         <div class="content">
-                        <h5 class="heading">{{ $project->title }}</h5>
-                    <p class="desc">{{ $project->description }}</p> 
+                        <h5 class="heading"><?php echo e($project->title); ?></h5>
+                    <p class="desc"><?php echo e($project->description); ?></p> 
                     
                         <p>+</p>
                     </div>
                 </div>
                 </div>
             </div>
-@endif
+<?php endif; ?>
 
-@endforeach
-@endif
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+<?php endif; ?>
 </section>`
 ;
         break;
@@ -615,18 +627,18 @@ Frameworks:  ASP.NET MVC jQuery, jQuery UI<br><br>
             document.getElementById("project").innerHTML = ""; 
             document.getElementById("project").innerHTML = ""; 
             document.getElementById("project").innerHTML =`<section class="homes">
-            @if(count($projects)>0)
-            @foreach($projects as $project)
-            @if($project->tech_stack=='nodejs')
+            <?php if(count($projects)>0): ?>
+            <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php if($project->tech_stack=='nodejs'): ?>
             <div class="container">
                 <div class="box">
                     <div class="imgbox">
-                    <img src='{{ $project->imgUrl}}' alt="House 1" class="imgp "> 
+                    <img src='<?php echo e($project->imgUrl); ?>' alt="House 1" class="imgp "> 
                     </div>
                     <div class="details">
                         <div class="content">
-                        <h5 class="heading">{{ $project->title }}</h5>
-                    <p class="desc">{{ $project->description }}</p> 
+                        <h5 class="heading"><?php echo e($project->title); ?></h5>
+                    <p class="desc"><?php echo e($project->description); ?></p> 
                     
                         <p>+</p>
                     </div>
@@ -634,38 +646,38 @@ Frameworks:  ASP.NET MVC jQuery, jQuery UI<br><br>
                 </div>
             </div>
 
-@endif
-@endforeach
-@endif
+<?php endif; ?>
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+<?php endif; ?>
 </section>`;
         break;
         case "laravel":
             document.getElementById("project").innerHTML = ""; 
         console.log("reactjs clicked");
         document.getElementById("project").innerHTML =`<section class="homes">
-            @if(count($projects)>0)
+            <?php if(count($projects)>0): ?>
             
-            @foreach($projects as $project)
-   @if($project->tech_stack=='laravel')
+            <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+   <?php if($project->tech_stack=='laravel'): ?>
    <div class="container">
                 <div class="box">
                     <div class="imgbox">
-                    <img src='{{ $project->imgUrl}}' alt="House 1" class="imgp "> 
+                    <img src='<?php echo e($project->imgUrl); ?>' alt="House 1" class="imgp "> 
                     </div>
                     <div class="details">
                         <div class="content">
-                        <h5 class="heading">{{ $project->title }}</h5>
-                    <p class="desc">{{ $project->description }}</p> 
+                        <h5 class="heading"><?php echo e($project->title); ?></h5>
+                    <p class="desc"><?php echo e($project->description); ?></p> 
                     
                         <p>+</p>
                     </div>
                 </div>
                 </div>
             </div>
-@endif
+<?php endif; ?>
 
-@endforeach
-@endif
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+<?php endif; ?>
 </section>`
 ;
         console.log("nodejs clicked");
@@ -675,19 +687,19 @@ Frameworks:  ASP.NET MVC jQuery, jQuery UI<br><br>
    
         console.log("reactjs clicked");
         document.getElementById("project").innerHTML =`<section class="homes">
-            @if(count($projects)>0)
+            <?php if(count($projects)>0): ?>
             
-            @foreach($projects as $project)
+            <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
             <div class="container">
                 <div class="box">
                     <div class="imgbox">
-                    <img src='{{ $project->imgUrl}}' alt="House 1" class="imgp "> 
+                    <img src='<?php echo e($project->imgUrl); ?>' alt="House 1" class="imgp "> 
                     </div>
                     <div class="details">
                         <div class="content">
-                        <h5 class="heading">{{ $project->title }}</h5>
-                    <p class="desc">{{ $project->description }}</p> 
+                        <h5 class="heading"><?php echo e($project->title); ?></h5>
+                    <p class="desc"><?php echo e($project->description); ?></p> 
                     
                         <p>+</p>
                     </div>
@@ -696,8 +708,8 @@ Frameworks:  ASP.NET MVC jQuery, jQuery UI<br><br>
             </div>
 
 
-@endforeach
-@endif
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+<?php endif; ?>
 </section>`
 ;
         console.log("laravel clicked");
@@ -725,4 +737,4 @@ Frameworks:  ASP.NET MVC jQuery, jQuery UI<br><br>
     <script src="js/theme.js"></script>
 </body>
 
-</html>
+</html><?php /**PATH C:\xampp\htdocs\brian\portfolio\resources\views/portfolio/index.blade.php ENDPATH**/ ?>
