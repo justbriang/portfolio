@@ -1,4 +1,4 @@
-{!! Form::open(['route'=>'projects.store','method'=>'POST','files' => true]) !!}
+{!! Form::open(['route'=>'store','method'=>'POST','files' => true]) !!}
 
 <div class="form-group">
 
@@ -13,6 +13,12 @@
         {{form::label('description', 'Job-Description')}}
 
         {{form::Textarea('description','',['class' =>'form-control','placeholder'=>'Description'])}}
+</div>
+<div class="form-group">
+
+    {{form::label('GithubUrl', 'GithubUrl')}}
+
+    {{form::Textarea('GithubUrl','',['class' =>'form-control','placeholder'=>'GithubUrl'])}}
 </div>
 <div class="form-group">
 

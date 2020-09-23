@@ -1,4 +1,4 @@
-<?php echo Form::open(['route'=>'projects.store','method'=>'POST','files' => true]); ?>
+<?php echo Form::open(['route'=>'store','method'=>'POST','files' => true]); ?>
 
 
 <div class="form-group">
@@ -17,6 +17,14 @@
 
 
         <?php echo e(form::Textarea('description','',['class' =>'form-control','placeholder'=>'Description'])); ?>
+
+</div>
+<div class="form-group">
+
+    <?php echo e(form::label('GithubUrl', 'GithubUrl')); ?>
+
+
+    <?php echo e(form::Textarea('GithubUrl','',['class' =>'form-control','placeholder'=>'GithubUrl'])); ?>
 
 </div>
 <div class="form-group">

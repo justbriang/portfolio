@@ -378,7 +378,8 @@
                                 <h5 class="heading"><?php echo e($project->title); ?></h5>
                                 <p class="desc"><?php echo e($project->description); ?></p>
                                 <br>
-                                <button class="btn2-imgbtn" onclick="">More info</button>
+                                <button class="btn2-imgbtn" onclick="location.href='<?php echo e($project->GithubUrl); ?>''">More
+                                    info</button>
                             </div>
 
                         </div>
