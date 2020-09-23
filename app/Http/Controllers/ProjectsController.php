@@ -18,7 +18,7 @@ class ProjectsController extends Controller
     {
     $projects=Project::all();
 
-    return view('portfolio.index')->with('projects', $projects);
+    return view('welcome')->with('projects', $projects);
     }
 
     /**
@@ -63,7 +63,7 @@ Storage::disk('s3')->setVisibility($imagepath,'public');
        $project->tech_stack=$request->input('tech_stack');
        $project->save();
 
-       return redirect('/projects')->with('success', 'Post Created');
+       return redirect('/')->with('success', 'Post Created');
 
         // return (new ProjectsResource($project))
         //     ->response()

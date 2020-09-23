@@ -25,6 +25,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="css/lightbox.min.css" rel="stylesheet" />
+    <script src="js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
     <title>Where it all goes down</title>
 </head>
@@ -195,20 +199,21 @@
                     <div class="welcome_text">
                         <p><b>KEY SKILLS</b><br>
 
-                        <p>Through what I've learnt in school and personal practice I have managed to gain the following skills:<br><br>
+                            <p>Through what I've learnt in school and personal practice I have managed to gain the
+                                following skills:<br><br>
 
-                    
-<i>Programming Languages:</i><br><br>
 
-Most experienced with:  CSS, Java, JavaScript,XML<br>
-Some experience with: PHP, PL/SQL, Python, SQL<br>
-Dabbled in: C, C++, C#<br><br>
+                                <i>Programming Languages:</i><br><br>
 
-<i>Databases:</i><br><br>
+                                Most experienced with: CSS, Java, JavaScript,XML<br>
+                                Some experience with: PHP, PL/SQL, Python, SQL<br>
+                                Dabbled in: C, C++, C#<br><br>
 
-Microsoft SQL Server, MySQL, Oracle 9i through 11g<br><br>
-<i>Frameworks:</i><br><br>
-Frameworks:  ASP.NET MVC jQuery, jQuery UI<br><br>
+                                <i>Databases:</i><br><br>
+
+                                Microsoft SQL Server, MySQL, Oracle 9i through 11g<br><br>
+                                <i>Frameworks:</i><br><br>
+                                Frameworks: ASP.NET MVC jQuery, jQuery UI<br><br>
 
 
                     </div>
@@ -217,14 +222,14 @@ Frameworks:  ASP.NET MVC jQuery, jQuery UI<br><br>
                     <div class="tools_expert">
                         <div class="skill_main">
                             <div class="skill_item">
-                            <p><b>TOOLS</b><br>
-                                <h4>Laravel<span class="counter">85</span>%</h4>
-                                <div class="progress_br">
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="85"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                <p><b>TOOLS</b><br>
+                                    <h4>Laravel<span class="counter">85</span>%</h4>
+                                    <div class="progress_br">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="85"
+                                                aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
                                     </div>
-                                </div>
                             </div>
                             <div class="skill_item">
                                 <h4>Nodejs <span class="counter">70</span>%</h4>
@@ -362,15 +367,20 @@ Frameworks:  ASP.NET MVC jQuery, jQuery UI<br><br>
                 <div class="container">
                     <div class="box">
                         <div class="imgbox">
+                            <a href='<?php echo e($project->imgUrl); ?>' data-lightbox="rods"
+                                data-title="<?php echo e($project->description); ?>"><img src='<?php echo e($project->imgUrl); ?>' alt="House 1"
+                                    class="imgp">
 
-                            <img src='<?php echo e($project->imgUrl); ?>' alt="House 1" class="imgp ">
+                            </a>
+                            
                         </div>
                         <div class="details">
                             <div class="content">
                                 <h5 class="heading"><?php echo e($project->title); ?></h5>
                                 <p class="desc"><?php echo e($project->description); ?></p>
 
-                                <p>+</p>
+
+
                             </div>
                         </div>
                     </div>
@@ -383,8 +393,15 @@ Frameworks:  ASP.NET MVC jQuery, jQuery UI<br><br>
                 <?php endif; ?>
 
             </section>
-        </section>
 
+
+        </section>
+        <div class="u-center-text u-margin-top-small u-margin-bottom-medium">
+        
+                <button class="btn1-imgbtn u-center-text" onclick="myFunction('android')">See More</button>
+          
+        </div>
+      
         <section class="contact" id="contact">
             <div class="u-center-text u-margin-top-small u-margin-bottom-medium">
                 <h2 class="heading-secondary">
@@ -406,7 +423,8 @@ Frameworks:  ASP.NET MVC jQuery, jQuery UI<br><br>
                             <div class="form-group <?php echo e($errors->has('firstname') ? 'has-error' : ''); ?>">
                                 <?php echo Form::label('Name:'); ?>
 
-                                <?php echo Form::text('firstname', old('firstname'), ['class'=>'form-control', 'placeholder'=>'Enter
+                                <?php echo Form::text('firstname', old('firstname'), ['class'=>'form-control',
+                                'placeholder'=>'Enter
                                 Firstname']); ?>
 
                                 <span class="text-danger"><?php echo e($errors->first('firstname')); ?></span>
@@ -561,6 +579,7 @@ Frameworks:  ASP.NET MVC jQuery, jQuery UI<br><br>
             </div>
         </section>
         -->
+
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <script>
         function myFunction(category) {
@@ -735,6 +754,7 @@ Frameworks:  ASP.NET MVC jQuery, jQuery UI<br><br>
     <script src="vendors/counter-up/jquery.counterup.min.js"></script>
     <script src="js/mail-script.js"></script>
     <script src="js/theme.js"></script>
+    <script src="path/to/lightbox.js"></script>
 </body>
 
 </html><?php /**PATH C:\xampp\htdocs\portfolio\resources\views/portfolio/index.blade.php ENDPATH**/ ?>

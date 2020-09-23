@@ -18,3 +18,11 @@
         transform: translateY(-1.5rem) scale(1.03);
     }
 }
+.iconify{
+    font-size: 6rem;
+    margin-bottom: .5rem;
+    display: inline-block;
+    color: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    -webkit-background-clip: text;
+    
+}

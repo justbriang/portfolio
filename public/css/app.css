@@ -11255,6 +11255,29 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
+.btn2-imgbtn {
+  background-color: transparent;
+  color: #55c57a;
+  border: #55c57a solid 0.1rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 0 3rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn2-imgbtn:hover {
+  background-color: #55c57a;
+  color: #fff;
+}
+
+.btn2-imgbtn:focus {
+  background-color: #55c57a;
+  color: #fff;
+  outline: none;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
 /* :: 6.0 Buttons CSS */
 
 /* :: 15.0 Gallery CSS */
@@ -11531,44 +11554,45 @@ body {
   transition: transform 2s;
 }
 
-.container .box .details {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  bottom: 1rem;
-  right: 1rem;
-  background: rgba(0, 0, 0, 0.8);
-  transform: scaleY(0);
-  transition: transform 0.5s;
-}
-
-.container .box .details .content {
+.container .box .content {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
-  padding: 2.5rem;
+  left: 50%;
+  transform: translate(-50%, 20%);
   color: #fff;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.5s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
-.container .box .details .content .heading {
+.container .box .content .heading {
   margin: 0;
   padding: 0;
   font-size: 2rem;
   color: #55c57a;
 }
 
-.container .box .details .content .desc {
+.container .box .content .desc {
   margin: 1.5rem 0 0;
   padding: 0;
 }
 
-.container .box:hover .details {
-  transform: scaleY(1);
+.container .box:hover .imgbox .imgp {
+  transform: scale(1.1);
+  filter: blur(3px) brightness(80%);
 }
 
-.container .box:hover .imgbox .imgp {
-  transform: scale(1.2);
+.container .box:hover .content {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.center {
+  justify-content: center;
 }
 
 .feature-box {
@@ -11592,6 +11616,14 @@ body {
 
 .feature-box:hover {
   transform: translateY(-1.5rem) scale(1.03);
+}
+
+.iconify {
+  font-size: 6rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  color: linear-gradient(to right, #7ed56f, #B28451);
+  -webkit-background-clip: text;
 }
 
 .popup {

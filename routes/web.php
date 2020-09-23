@@ -14,10 +14,8 @@ use App\Http\Controllers\ContactUSController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::resource('projects', ProjectsController::class);
+
+Route::resource('/', ProjectsController::class);
 Route::resource('contact-us', ContactUSController::class);
 //Route::post('/projects', [ProjectsController::class, 'store']);
 

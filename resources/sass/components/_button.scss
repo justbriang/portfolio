@@ -105,5 +105,26 @@
             box-shadow: 0 .5rem 1rem rgba(transparent, .2);
         }
     }
+    .btn2-imgbtn {
+        background-color: transparent;
+        color: #55c57a;
+        border: #55c57a solid .1rem;
+        font-size: 1.5rem;
+      
+        text-transform: uppercase;
+        padding: 0 3rem;
+        cursor: pointer;
+        transition: all .2s;
+        &:hover {
+            background-color: #55c57a;
+            color: #fff;
+        }
+        &:focus {
+            background-color: #55c57a;
+            color: #fff;
+            outline: none;
+            box-shadow: 0 .5rem 1rem rgba(transparent, .2);
+        }
+    }
 /* :: 6.0 Buttons CSS */
 

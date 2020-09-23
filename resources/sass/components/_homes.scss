@@ -69,25 +69,23 @@
             .imgp{
                 max-width: 100%;
                 transition: transform 2s;
+               
             }
         }
      
-        .details{
-            position: absolute;
-            top: 1rem;
-            left: 1rem;
-            bottom: 1rem;
-            right:1rem;
-            background: rgba(0,0,0,.8);
-            transform: scaleY(0);
-            transition: transform .5s;
+     
             .content{
                 position: absolute;
-                top:50%;
-                transform: translateY(-50%);
-                text-align: center;
-                padding: 2.5rem;
-                color:#fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+        backface-visibility: hidden;
                 .heading{
                     margin:0;
                     padding: 0;
@@ -102,18 +100,26 @@
                 }
             }
 
-        }
-        &:hover {
-            .details{
-                transform: scaleY(1);
-            }
-        }
+        
+        
         &:hover {
             .imgbox{
+              
                 .imgp{
-                    transform: scale(1.2);
+                   
+                    
+                    transform: scale(1.1);
+                   
+                    filter: blur(3px) brightness(80%);
                 }
+            }
+            .content{
+                opacity: 1;
+                transform: translate(-50%, -50%);
             }
         }
     }
+}
+.center{
+    justify-content: center;
 }

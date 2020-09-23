@@ -1,134 +1,762 @@
 <!DOCTYPE html>
-<html lang="<?php echo e(str_replace('_', '-', app()->getLocale())); ?>">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
 
-        <title>Laravel</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}}
-        </style>
+    <link rel="stylesheet" href="css/icon-font.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="vendors/linericon/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
+    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+    <link rel="stylesheet" href="vendors/animate-css/animate.css">
+    <link rel="stylesheet" href="vendors/popup/magnific-popup.css">
+    <!-- main css -->
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="css/lightbox.min.css" rel="stylesheet" />
+    <script src="js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
-        <style>
-            body {
-                font-family: 'Nunito';
-            }
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
-            <?php if(Route::has('login')): ?>
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    <?php if(auth()->guard()->check()): ?>
-                        <a href="<?php echo e(url('/home')); ?>" class="text-sm text-gray-700 underline">Home</a>
-                    <?php else: ?>
-                        <a href="<?php echo e(route('login')); ?>" class="text-sm text-gray-700 underline">Login</a>
+    <title>Where it all goes down</title>
+</head>
 
-                        <?php if(Route::has('register')): ?>
-                            <a href="<?php echo e(route('register')); ?>" class="ml-4 text-sm text-gray-700 underline">Register</a>
-                        <?php endif; ?>
-                    <?php endif; ?>
-                </div>
-            <?php endif; ?>
+<body>
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
 
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
-                        <g clip-path="url(#clip0)" fill="#EF3B2D">
-                            <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z"/>
-                        </g>
-                    </svg>
-                </div>
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
 
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
-                            </div>
+        <div class="navigation__background">&nbsp;</div>
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
-                                </div>
-                            </div>
-                        </div>
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#header" class="navigation__link">Home</a></li>
+                <li class="navigation__item"><a href="#features" class="navigation__link">About</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Education</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Projects</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Contacts</a></li>
+            </ul>
+        </nav>
+    </div>
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
-                            </div>
+    <header class="header">
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </div>
-                            </div>
-                        </div>
+        <div class="header__logo-box">
+            <img src="img/logo-white.png" alt="Logo" class="header__logo">
+        </div>
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
-                            </div>
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">Hi!</span><br>
+                <span class="heading-primary--main">i'm Brian</span><br>
+                <span class="heading-primary--sub">what do i do,and what's in it for you?</span>
+            </h1>
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </div>
-                            </div>
-                        </div>
+            <a href="#about" class="btn btn--white btn--animated">Find Out</a>
+        </div>
+    </header>
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
-                            </div>
+    <main>
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <section class="section-about" id="about">
+
+            <div class="row">
+                <div class="col-1-of-2">
+                    <h2 class="heading-secondary u-margin-bottom-small slowmo">
+                        About
+
+                    </h2>
                 </div>
 
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
+                <div class="col-1-of-2">
+                    <h3 class="heading-tertiary u-margin-bottom-small slowmo">Hi! My name is Brian Karanja
+                    </h3>
+                    <p class="paragraph slowmo">
+                        I am currently pursuing a Bachelor in Informatics and Computer Science.
+                        My core competencies lie in mobile application development both native Android
+                        and cross-platform in Flutter, web development using the Laravel framework.
+                        In addition, I also have vast knowlegde in the React front-end framework and the Nodejs runtime.
+                        I also have experience in using both SQL and NoSQL databases such as mySql, heroku postgres Web
+                        Research and mongodb.
+                        There is more to that as I am still learning and I am confident that I can do anything related
+                        to computers,I just need
+                        a little bit of guidance to get started.
+                    </p>
+                    <p class="paragraph slowmo"><strong>Contact me</strong></p>
 
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Shop
-                            </a>
+                    <ul class="list basic_info slowmo u-margin-bottom-small">
 
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="ml-4 -mt-px w-5 h-5 text-gray-400">
-                                <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
 
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Sponsor
-                            </a>
-                        </div>
-                    </div>
+                        <li><a href="#"><i class="lnr lnr-phone-handset"></i> +254 702 635 515</a></li>
+                        <li><a href="#"><i class="lnr lnr-envelope"></i> gichukxb@gmail.com</a></li>
+                        <li><a href="#"><i class="lnr lnr-home"></i> Nairobi, Kenya</a></li>
+                    </ul>
 
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Build v<?php echo e(Illuminate\Foundation\Application::VERSION); ?>
+
+                    <a href="#" class="btn-text slowmo">Learn more &rarr;</a>
+                </div>
+                <div class="col-1-of-2">
+                    <div class="composition">
+                        <img src="img/img13.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
+                        <img src="img/img14.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
 
                     </div>
                 </div>
             </div>
+        </section>
+        <!--================My Tabs Area =================-->
+        <section class="mytabs_area p_120">
+            <div class="container">
+                <div class="tabs_inner">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                aria-controls="home" aria-selected="true">My Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                aria-controls="profile" aria-selected="false">My Experiences</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <ul class="list">
+                                <li>
+                                    <span></span>
+                                    <div class="media">
+                                        <div class="d-flex">
+                                            <p>July 2018 to present</p>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4>Strathmore University</h4>
+                                            <p>Informatics and Computer Science <br />Nairobi, Kenya</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <ul class="list">
+                                <li>
+                                    <span></span>
+                                    <div class="media">
+                                        <div class="d-flex">
+                                            <p>November 2019 to<br> September</p>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4>Omni HealthCare Staffing</h4>
+                                            <p>Contract for Development of a system, built on Nodejs and Flutter.
+                                                <br />Worcester, Massachusetts, United States</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <span></span>
+                                    <div class="media">
+                                        <div class="d-flex">
+                                            <p>January 2020 to April <br> 2020</p>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4>Tigoni Level 4 Hospital</h4>
+                                            <p>System Support Volunteer<br />Limuru, Kenya</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================Welcome Area =================-->
+        <section class="welcome_area p_120">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">
+                    Technology Stack
+                </h2>
+            </div>
+
+
+            <div class="row">
+                <div class="col-1-of-2">
+                    <div class="welcome_text">
+                        <p><b>KEY SKILLS</b><br>
+
+                            <p>Through what I've learnt in school and personal practice I have managed to gain the
+                                following skills:<br><br>
+
+
+                                <i>Programming Languages:</i><br><br>
+
+                                Most experienced with: CSS, Java, JavaScript,XML<br>
+                                Some experience with: PHP, PL/SQL, Python, SQL<br>
+                                Dabbled in: C, C++, C#<br><br>
+
+                                <i>Databases:</i><br><br>
+
+                                Microsoft SQL Server, MySQL, Oracle 9i through 11g<br><br>
+                                <i>Frameworks:</i><br><br>
+                                Frameworks: ASP.NET MVC jQuery, jQuery UI<br><br>
+
+
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <div class="tools_expert">
+                        <div class="skill_main">
+                            <div class="skill_item">
+                                <p><b>TOOLS</b><br>
+                                    <h4>Laravel<span class="counter">85</span>%</h4>
+                                    <div class="progress_br">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="85"
+                                                aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="skill_item">
+                                <h4>Nodejs <span class="counter">70</span>%</h4>
+                                <div class="progress_br">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill_item">
+                                <h4>Android <span class="counter">80</span>%</h4>
+                                <div class="progress_br">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="80"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill_item">
+                                <h4>Reactjs <span class="counter">65</span>%</h4>
+                                <div class="progress_br">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="65"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill_item">
+                                <h4>Flutter <span class="counter">70</span>%</h4>
+                                <div class="progress_br">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="section-features" id="features">
+
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">
+                    Skills
+                </h2>
+            </div>
+            <div class="row">
+                <div class="col-1-of-4">
+                    <div class="feature-box">
+                        <span class=" feature-box__icon material-icons">
+                            android
+                        </span>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Mobile App development</h3>
+                        <p class="feature-box__text">
+                            I have experience in native android Application development, using the MVVM. In
+                            addition, I have some experience in cross platform mobile application development using
+                            Flutter
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-1-of-4">
+                    <div class="feature-box">
+                        <span class=" feature-box__icon material-icons">
+                            language
+                        </span>
+
+                        <h3 class="heading-tertiary u-margin-bottom-small">Web design</h3>
+                        <p class="feature-box__text">
+                            I have experience in the use of the full stack laravel framework and the Reactjs front end
+                            framework coupled with concepts such as Redux in the design and development of fast and
+                            realiable websites
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-1-of-4">
+                    <div class="feature-box">
+
+                        <span class="feature-box__icon material-icons">
+                            api
+                        </span>
+                        <h3 class="heading-tertiary u-margin-bottom-small">API Development</h3>
+                        <p class="feature-box__text">
+                            I have knowledge in the development of monolithic Restful APIs,in facilitating
+                            communication of two or more systems over HTTP.I can develop APIs using Laravel framework
+                            and/or the nodejs runtime
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-1-of-4">
+                    <div class="feature-box">
+
+                        <span class="iconify" data-icon="mdi-github" data-inline="false"></span>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Git and Github</h3>
+                        <p class="feature-box__text">
+                            I have a good understanding of use of the github
+                            tool,for version control both on the command line and using GUI.I am also familiar with
+                            advanced version control such us code conflict resolving and merging
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+        <section class="btns">
+            <div class="row  ">
+                <div class="col-1-of-4">
+                    <button class="btn1-imgbtn " onclick="myFunction('android')">android</button>
+                </div>
+                <div class="col-1-of-4">
+                    <button class="btn1-imgbtn" onclick="myFunction('laravel')">laravel</button>
+                </div>
+                <div class="col-1-of-4">
+                    <button class="btn1-imgbtn " onclick="myFunction('nodejs')">node js</button>
+                </div>
+                <div class="col-1-of-4">
+                    <button class="btn1-imgbtn" onclick="myFunction('reactjs')">react js</button>
+                </div>
+            </div>
+        </section>
+        <section id="project">
+            <section class="homes">
+
+                <?php if(count($projects)>0): ?>
+
+                <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="container">
+                    <div class="box">
+                        <div class="imgbox">
+                            <a href='<?php echo e($project->imgUrl); ?>' data-lightbox="rods" data-title="<h5 class='heading'><?php echo e($project->title); ?></h5>
+                                <p class='desc'><?php echo e($project->description); ?></p>"><img src='<?php echo e($project->imgUrl); ?>'
+                                    alt="House 1" class="imgp">
+
+                            </a>
+                            <div class="content">
+                                <h5 class="heading"><?php echo e($project->title); ?></h5>
+                                <p class="desc"><?php echo e($project->description); ?></p>
+                                <br>
+                                <button class="btn2-imgbtn" onclick="">More info</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                <?php endif; ?>
+
+            </section>
+
+            <div class="u-center-text u-margin-top-small u-margin-bottom-medium">
+
+                <button class="btn1-imgbtn u-center-text"
+                    onclick="location.href='https://github.com/justbriang?tab=repositories'">See
+                    More</button>
+
+            </div>
+
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="u-center-text u-margin-top-small u-margin-bottom-medium">
+                <h2 class="heading-secondary">
+                    Get in touch
+                </h2>
+            </div>
+            <div class="row">
+                <div class="col-1-of-2">
+                    <?php if(Session::has('success')): ?>
+                    <div class="alert alert-success">
+                        <?php echo e(Session::get('success')); ?>
+
+                    </div>
+                    <?php endif; ?>
+                    <?php echo Form::open(['route'=>'contact-us.store']); ?>
+
+                    <div class="form-row">
+                        <div class="col">
+                            <div class="form-group <?php echo e($errors->has('firstname') ? 'has-error' : ''); ?>">
+                                <?php echo Form::label('Name:'); ?>
+
+                                <?php echo Form::text('firstname', old('firstname'), ['class'=>'form-control',
+                                'placeholder'=>'Enter
+                                Firstname']); ?>
+
+                                <span class="text-danger"><?php echo e($errors->first('firstname')); ?></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group <?php echo e($errors->has('name') ? 'has-error' : ''); ?>">
+                                <?php echo Form::label('Name:'); ?>
+
+                                <?php echo Form::text('lastname', old('name'), ['class'=>'form-control', 'placeholder'=>'Enter
+                                Lastname']); ?>
+
+                                <span class="text-danger"><?php echo e($errors->first('name')); ?></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group <?php echo e($errors->has('email') ? 'has-error' : ''); ?>">
+                        <?php echo Form::label('Email:'); ?>
+
+                        <?php echo Form::text('email', old('email'), ['class'=>'form-control', 'placeholder'=>'Enter Email']); ?>
+
+                        <span class="text-danger"><?php echo e($errors->first('email')); ?></span>
+                    </div>
+                    <div class="form-group <?php echo e($errors->has('subject') ? 'has-error' : ''); ?>">
+                        <?php echo Form::label('Subject:'); ?>
+
+                        <?php echo Form::text('subject', old('subject'), ['class'=>'form-control', 'placeholder'=>'Enter
+                        Subject']); ?>
+
+                        <span class="text-danger"><?php echo e($errors->first('name')); ?></span>
+                    </div>
+                    <div class="form-group <?php echo e($errors->has('message') ? 'has-error' : ''); ?>">
+                        <?php echo Form::label('Message:'); ?>
+
+                        <?php echo Form::textarea('message', old('message'), ['class'=>'form-control', 'placeholder'=>'Enter
+                        Message']); ?>
+
+                        <span class="text-danger"><?php echo e($errors->first('message')); ?></span>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary py-3 px-5">Contact US!</button>
+                    </div>
+                    <?php echo Form::close(); ?>
+
+                </div>
+
+                <div class="col-1-of-2 ">
+                    <div class="imge"
+                        style="background-image: url(/img/about.jpg); background-size: cover;background-repeat: no-repeat;background-position: center center; ">
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="row">
+            <div class="col-1-of-2">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <ul class="list basic_info">
+                            <li><a href="#"><i class="lnr lnr-calendar-full"></i> 31st December, 1992</a></li>
+                            <li><a href="#"><i class="lnr lnr-phone-handset"></i> 44 (012) 6954 783</a></li>
+                            <li><a href="#"><i class="lnr lnr-envelope"></i> businessplan@donald</a></li>
+                            <li><a href="#"><i class="lnr lnr-home"></i> Santa monica bullevard</a></li>
+                        </ul>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1-of-2">
+                <div class="footer__navigation">
+                    <p>try try</p>
+                </div>
+            </div>
         </div>
-    </body>
-</html>
-<?php /**PATH C:\xampp\htdocs\portfolio\resources\views/welcome.blade.php ENDPATH**/ ?>
+    </footer>
+
+
+
+    <!--
+        <section class="grid-test">
+            <div class="row">
+                <div class="col-1-of-2">
+                    Col 1 of 2
+                </div>
+                <div class="col-1-of-2">
+                    Col 1 of 2
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-3">
+                    Col 1 of 3
+                </div>
+                <div class="col-1-of-3">
+                    Col 1 of 3
+                </div>
+                <div class="col-1-of-3">
+                    Col 1 of 3
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-3">
+                    Col 1 of 3
+                </div>
+                <div class="col-2-of-3">
+                    Col 2 of 3
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-2-of-4">
+                    Col 2 of 4
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-3-of-4">
+                    Col 3 of 4
+                </div>
+            </div>
+        </section>
+        -->
+
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script>
+        function myFunction(category) {
+    // document.getElementById("demo").style.color = "red";
+    switch(category){
+        case "android":
+            document.getElementById("project").innerHTML = ""; 
+            document.getElementById("project").innerHTML =`<section class="homes">
+            <?php if(count($projects)>0): ?>
+            <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php if($project->tech_stack=='android'): ?>
+            <div class="container">
+                <div class="box">
+                    <div class="imgbox">
+                    <img src='<?php echo e($project->imgUrl); ?>' alt="House 1" class="imgp "> 
+                    </div>
+                    <div class="details">
+                        <div class="content">
+                        <h5 class="heading"><?php echo e($project->title); ?></h5>
+                    <p class="desc"><?php echo e($project->description); ?></p> 
+                    
+                        <p>+</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+<?php endif; ?>
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+<?php endif; ?>
+</section>`;
+        break;
+        case "reactjs":
+            document.getElementById("project").innerHTML = ""; 
+        console.log("reactjs clicked");
+        document.getElementById("project").innerHTML =`<section class="homes">
+            <?php if(count($projects)>0): ?>
+            
+            <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+   <?php if($project->tech_stack=='reactjs'): ?>
+   <div class="container">
+                <div class="box">
+                    <div class="imgbox">
+                    <img src='<?php echo e($project->imgUrl); ?>' alt="House 1" class="imgp "> 
+                    </div>
+                    <div class="details">
+                        <div class="content">
+                        <h5 class="heading"><?php echo e($project->title); ?></h5>
+                    <p class="desc"><?php echo e($project->description); ?></p> 
+                    
+                        <p>+</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+<?php endif; ?>
+
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+<?php endif; ?>
+</section>`
+;
+        break;
+        case "nodejs":
+            document.getElementById("project").innerHTML = ""; 
+            document.getElementById("project").innerHTML = ""; 
+            document.getElementById("project").innerHTML =`<section class="homes">
+            <?php if(count($projects)>0): ?>
+            <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php if($project->tech_stack=='nodejs'): ?>
+            <div class="container">
+                <div class="box">
+                    <div class="imgbox">
+                    <img src='<?php echo e($project->imgUrl); ?>' alt="House 1" class="imgp "> 
+                    </div>
+                    <div class="details">
+                        <div class="content">
+                        <h5 class="heading"><?php echo e($project->title); ?></h5>
+                    <p class="desc"><?php echo e($project->description); ?></p> 
+                    
+                        <p>+</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+<?php endif; ?>
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+<?php endif; ?>
+</section>`;
+        break;
+        case "laravel":
+            document.getElementById("project").innerHTML = ""; 
+        console.log("reactjs clicked");
+        document.getElementById("project").innerHTML =`<section class="homes">
+            <?php if(count($projects)>0): ?>
+            
+            <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+   <?php if($project->tech_stack=='laravel'): ?>
+   <div class="container">
+                <div class="box">
+                    <div class="imgbox">
+                    <img src='<?php echo e($project->imgUrl); ?>' alt="House 1" class="imgp "> 
+                    </div>
+                    <div class="details">
+                        <div class="content">
+                        <h5 class="heading"><?php echo e($project->title); ?></h5>
+                    <p class="desc"><?php echo e($project->description); ?></p> 
+                    
+                        <p>+</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+<?php endif; ?>
+
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+<?php endif; ?>
+</section>`
+;
+        console.log("nodejs clicked");
+        break;
+        default:
+        document.getElementById("project").innerHTML = ""; 
+   
+        console.log("reactjs clicked");
+        document.getElementById("project").innerHTML =`<section class="homes">
+            <?php if(count($projects)>0): ?>
+            
+            <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+
+            <div class="container">
+                <div class="box">
+                    <div class="imgbox">
+                    <img src='<?php echo e($project->imgUrl); ?>' alt="House 1" class="imgp "> 
+                    </div>
+                    <div class="details">
+                        <div class="content">
+                        <h5 class="heading"><?php echo e($project->title); ?></h5>
+                    <p class="desc"><?php echo e($project->description); ?></p> 
+                    
+                        <p>+</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+<?php endif; ?>
+</section>`
+;
+        console.log("laravel clicked");
+        break;
+
+    }
+
+
+}
+    </script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/stellar.js"></script>
+    <script src="vendors/lightbox/simpleLightbox.min.js"></script>
+    <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="vendors/isotope/isotope.pkgd.min.js"></script>
+    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="vendors/popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendors/counter-up/jquery.counterup.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="path/to/lightbox.js"></script>
+</body>
+
+</html><?php /**PATH C:\xampp\htdocs\portfolio\resources\views/welcome.blade.php ENDPATH**/ ?>
