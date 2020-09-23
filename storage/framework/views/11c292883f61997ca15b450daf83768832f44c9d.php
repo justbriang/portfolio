@@ -58,17 +58,18 @@
 
         <div class="header__text-box">
             <h1 class="heading-primary">
-                <span class="heading-primary--main">Designing</span>
-                <span class="heading-primary--sub">while exploring the world...</span>
+                <span class="heading-primary--main">Hi!</span><br>
+                <span class="heading-primary--main">i'm Brian</span><br>
+                <span class="heading-primary--sub">what do i do,and what's in it for you?</span>
             </h1>
 
-            <a href="#contact" class="btn btn--white btn--animated">Get in touch</a>
+            <a href="#about" class="btn btn--white btn--animated">Find Out</a>
         </div>
     </header>
 
     <main>
 
-        <section class="section-about">
+        <section class="section-about" id="about">
 
             <div class="row">
                 <div class="col-1-of-2">
@@ -79,7 +80,7 @@
                 </div>
 
                 <div class="col-1-of-2">
-                    <h3 class="heading-tertiary u-margin-bottom-small slowmo">Hi! My name is Brian
+                    <h3 class="heading-tertiary u-margin-bottom-small slowmo">Hi! My name is Brian Karanja
                     </h3>
                     <p class="paragraph slowmo">
                         I am currently pursuing a Bachelor in Informatics and Computer Science.
@@ -192,11 +193,23 @@
             <div class="row">
                 <div class="col-1-of-2">
                     <div class="welcome_text">
-                        <p>inappropriate behavior is often laughed off as
-                            “boys will be boys,” women face higher conduct
-                            standards especially in the workplace.
-                            That’s why it’s crucial that, as women,
-                            our behavior on the job is beyond reproach. inappropriate behavior is often laughed.</p>
+                        <p><b>KEY SKILLS</b><br>
+
+                        <p>Through what I've learnt in school and personal practice I have managed to gain the following skills:<br><br>
+
+                    
+<i>Programming Languages:</i><br><br>
+
+Most experienced with:  CSS, Java, JavaScript,XML<br>
+Some experience with: PHP, PL/SQL, Python, SQL<br>
+Dabbled in: C, C++, C#<br><br>
+
+<i>Databases:</i><br><br>
+
+Microsoft SQL Server, MySQL, Oracle 9i through 11g<br><br>
+<i>Frameworks:</i><br><br>
+Frameworks:  ASP.NET MVC jQuery, jQuery UI<br><br>
+
 
                     </div>
                 </div>
@@ -204,6 +217,7 @@
                     <div class="tools_expert">
                         <div class="skill_main">
                             <div class="skill_item">
+                            <p><b>TOOLS</b><br>
                                 <h4>Laravel<span class="counter">85</span>%</h4>
                                 <div class="progress_br">
                                     <div class="progress">
