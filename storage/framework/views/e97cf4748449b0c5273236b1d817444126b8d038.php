@@ -378,7 +378,7 @@
                                 <h5 class="heading"><?php echo e($project->title); ?></h5>
                                 <p class="desc"><?php echo e($project->description); ?></p>
                                 <br>
-                                <button class="btn2-imgbtn" onclick="location.href='<?php echo e($project->GithubUrl); ?>''">More
+                                <button class="btn2-imgbtn" onclick="location.href='<?php echo e($project->GithubUrl); ?>'">More
                                     info</button>
                             </div>
 
@@ -427,8 +427,7 @@
                                 <?php echo Form::label('Name:'); ?>
 
                                 <?php echo Form::text('firstname', old('firstname'), ['class'=>'form-control',
-                                'placeholder'=>'Enter
-                                Firstname']); ?>
+                                'placeholder'=>'firstname']); ?>
 
                                 <span class="text-danger"><?php echo e($errors->first('firstname')); ?></span>
                             </div>
@@ -437,8 +436,8 @@
                             <div class="form-group <?php echo e($errors->has('name') ? 'has-error' : ''); ?>">
                                 <?php echo Form::label('Name:'); ?>
 
-                                <?php echo Form::text('lastname', old('name'), ['class'=>'form-control', 'placeholder'=>'Enter
-                                Lastname']); ?>
+                                <?php echo Form::text('lastname', old('name'), ['class'=>'form-control',
+                                'placeholder'=>'lastname']); ?>
 
                                 <span class="text-danger"><?php echo e($errors->first('name')); ?></span>
                             </div>
@@ -448,23 +447,22 @@
                     <div class="form-group <?php echo e($errors->has('email') ? 'has-error' : ''); ?>">
                         <?php echo Form::label('Email:'); ?>
 
-                        <?php echo Form::text('email', old('email'), ['class'=>'form-control', 'placeholder'=>'Enter Email']); ?>
+                        <?php echo Form::text('email', old('email'), ['class'=>'form-control', 'placeholder'=>'email']); ?>
 
                         <span class="text-danger"><?php echo e($errors->first('email')); ?></span>
                     </div>
                     <div class="form-group <?php echo e($errors->has('subject') ? 'has-error' : ''); ?>">
                         <?php echo Form::label('Subject:'); ?>
 
-                        <?php echo Form::text('subject', old('subject'), ['class'=>'form-control', 'placeholder'=>'Enter
-                        Subject']); ?>
+                        <?php echo Form::text('subject', old('subject'), ['class'=>'form-control', 'placeholder'=>'subject']); ?>
 
                         <span class="text-danger"><?php echo e($errors->first('name')); ?></span>
                     </div>
                     <div class="form-group <?php echo e($errors->has('message') ? 'has-error' : ''); ?>">
                         <?php echo Form::label('Message:'); ?>
 
-                        <?php echo Form::textarea('message', old('message'), ['class'=>'form-control', 'placeholder'=>'Enter
-                        Message']); ?>
+                        <?php echo Form::textarea('message', old('message'), ['class'=>'form-control',
+                        'placeholder'=>'message']); ?>
 
                         <span class="text-danger"><?php echo e($errors->first('message')); ?></span>
                     </div>
