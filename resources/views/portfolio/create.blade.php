@@ -1,4 +1,4 @@
-{!! Form::open(['route'=>'projects.store','method'=>'POST','files' => true]) !!}
+{!! Form::open(['route'=>'store','method'=>'POST','files' => true]) !!}
 
 <div class="form-group">
 
@@ -19,6 +19,12 @@
     {{form::label('tech_stack', 'Job-Description')}}
 
     {{form::Textarea('tech_stack','',['class' =>'form-control','placeholder'=>'tech_stack'])}}
+</div>
+<div class="form-group">
+
+    {{form::label('GithubUrl', 'GithubUrl')}}
+
+    {{form::Textarea('GithubUrl','',['class' =>'form-control','placeholder'=>'GithubUrl'])}}
 </div>
 
 <div class="form-group">

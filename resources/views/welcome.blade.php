@@ -770,32 +770,6 @@
                 </div>
               </div>
           </div>
-<!-- 
- <div class="row my-auto">
-	  <div class="col-12">
-	<div class="container-fluid px-md-0">
-    		<div class="row no-gutters justify-content-center pb-5">
-          <div class="col-md-12 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">My Projects</h2>
-	 <div class="row my-auto">
-             
-   <div class="col-md-12">
-                <div class="port-head-cont">
-        <div class="row  ">
-                <div class="col-1-of-4">
-                <button class="btn btn-general btn-green filter-b" onclick="myFunction('android')">android</button>
-                </div>
-                <div class="col-1-of-4">
-                <button class="btn btn-general btn-green filter-b" onclick="myFunction('laravel')">laravel</button>
-                </div>
-                <div class="col-1-of-4">
-                <button class="btn btn-general btn-green filter-b" onclick="myFunction('nodejs')">node js</button>
-                </div>
-                <div class="col-1-of-4">
-                <button class="btn btn-general btn-green filter-b" onclick="myFunction('reactjs')">react js</button>
-                </div>
-            </div> -->
         </section>
     
         <section id="project">
@@ -814,230 +788,28 @@
                         <h5 class="heading">{{ $project->title }}</h5>
                     <p> 1class="desc">{{ $project->description }}</p> 
                     
-            <a href='' class="btn btn--white btn--animated">Get in touch</a>
-                    </div>
+                    <button class="btn2-imgbtn" onclick="location.href='{{$project->GithubUrl}}'">More
+                                    info</button>
                 </div>
                 </div>
             </div>
 
-        <!-- <div class="home">
-         <img src='{{ $project->imgUrl }}' alt="House 1" class="home__img "> 
-        
-      
-        <h5 class="home__name">{{ $project->title }}</h5>
-        </div> -->
-        <!-- <div class="home__location">
-          
-            <p><strong>Description: </strong>{{ $project->description }}</p>
-        </div>
-
-      
-        <div class="home__price">
-           <p><strong>Tech_stack: </strong>{{ $project->tech_stack }}</p>
-        </div>
-        <button class="btn1-imgbtn home__btn">Repository</button> -->
-    
-
-
-
+</div>
 @endforeach
 @endif
 
 </section>
-	
-	<!--
-    	<div class="container-fluid px-md-0">
-    		<div class="row no-gutters justify-content-center pb-5">
-          <div class="col-md-12 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">My Projects</h2>
-			<div class="row my-auto">
-              <div class="col-12">
-               
-                <div class="mb-5 heading-border"></div>
-              </div>
-              <div class="col-md-12">
-			<div class="mb-5 heading-border"></div>
-              </div>
-              <div class="col-md-12">
-                <div class="port-head-cont">
-                  <button class="btn btn-general btn-green filter-b" data-filter="all">All</button>
-                  <button class="btn btn-general btn-green filter-b" data-filter="consulting">Web Design</button>
-                  <button class="btn btn-general btn-green filter-b" data-filter="finance">Mobile Apps</button>
-                  <button class="btn btn-general btn-green filter-b" data-filter="marketing">Graphics Design</button> 
-                </div>
-              </div>
-          </div>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-          </div>
-        </div>
-    		<div class="row no-gutters">
-    			<div class="col-md-4">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/work-1.jpg);">
-    					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="#">Branding &amp; Illustration Design</a></h3>
-	    					<span>Web Design</span>
-	    				</div>
-    				</div>
-  				</div>
-  				<div class="col-md-4">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/work-2.jpg);">
-    					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="#">Branding &amp; Illustration Design</a></h3>
-	    					<span>Web Design</span>
-	    				</div>
-    				</div>
-  				</div>
 
-    			<div class="col-md-4">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/work-3.jpg);">
-    					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="#">Branding &amp; Illustration Design</a></h3>
-	    					<span>Web Design</span>
-	    				</div>
-    				</div>
-    			</div>
-    			<div class="col-md-4">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/work-4.jpg);">
-    					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="#">Branding &amp; Illustration Design</a></h3>
-	    					<span>Web Design</span>
-	    				</div>
-    				</div>
-    			</div>
-    			<div class="col-md-4">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/work-5.jpg);">
-    					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="#">Branding &amp; Illustration Design</a></h3>
-	    					<span>Web Design</span>
-	    				</div>
-    				</div>
-    			</div>
-    			<div class="col-md-4">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/work-6.jpg);">
-    					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="#">Branding &amp; Illustration Design</a></h3>
-	    					<span>Web Design</span>
-	    				</div>
-    				</div>
-    			</div>
-    		</div>
-    	</div>
-		
-		-->
+<div class="u-center-text u-margin-top-small u-margin-bottom-medium">
+
+                <button class="btn1-imgbtn u-center-text"
+                    onclick="location.href='https://github.com/justbriang?tab=repositories'">See
+                    More</button>
+
+            </div>
+	
     </section>
-<!--
-    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-    	<div class="container-fluid px-md-5">
-				<div class="row d-md-flex align-items-center">
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 shadow">
-              <div class="text">
-                <strong class="number" data-number="100">0</strong>
-                <span>Awards</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 shadow">
-              <div class="text">
-                <strong class="number" data-number="1200">0</strong>
-                <span>Complete Projects</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 shadow">
-              <div class="text">
-                <strong class="number" data-number="1200">0</strong>
-                <span>Happy Customers</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 shadow">
-              <div class="text">
-                <strong class="number" data-number="500">0</strong>
-                <span>Cups of coffee</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
--->
-<!--
-    <section class="ftco-section" id="blog-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Blog</h1>
-            <h2 class="mb-4">Our Blog</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-          </div>
-        </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
-                <div class="d-flex align-items-center mb-3 meta">
-	                <p class="mb-0">
-	                	<span class="mr-2">Sept. 12, 2019</span>
-	                	<a href="#" class="mr-2">Admin</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-	                </p>
-                </div>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
-                <div class="d-flex align-items-center mb-3 meta">
-	                <p class="mb-0">
-	                	<span class="mr-2">Sept. 12, 2019</span>
-	                	<a href="#" class="mr-2">Admin</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-	                </p>
-                </div>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
-                <div class="d-flex align-items-center mb-3 meta">
-	                <p class="mb-0">
-	                	<span class="mr-2">Sept. 12, 2019</span>
-	                	<a href="#" class="mr-2">Admin</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-	                </p>
-                </div>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-	-->
+
 
     <section class="ftco-section ftco-hireme img" style="background-image: url(images/bg_1.jpg)">
     	<div class="overlay"></div>
@@ -1143,25 +915,6 @@
 {!! Form::close() !!}
 </div>
 
-<!-- 
-            <form action="/contact-us" method= "post" class="bg-light p-4 p-md-5 contact-form">
-            {{csrf_field()}}
-              <div class="form-group">
-                <input type="text" name="name" class="form-control" placeholder="Enter Your Name">
-              </div>
-              <div class="form-group">
-                <input type="text" name="email" class="form-control" placeholder="Enter Your Email">
-              </div>
-              <div class="form-group">
-                <input type="text" name="subject" class="form-control" placeholder="Subject">
-              </div>
-              <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7"  name="message" class="form-control" placeholder="Message"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Send Message" name="send" class="btn btn-primary py-3 px-5">
-              </div>
-            </form> -->
 
           </div>
 
@@ -1225,470 +978,7 @@
         </div>
       </div>
     </footer>
-    
-<!--====================================================
-                    PORTFOLIO MODALS
-======================================================-->
-    <!-- <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true" >
-      <div class="modal-dialog" role="document">
-          <div class="modal-content">
-              <div class="close-modal" data-dismiss="modal">
-                  <div class="lr">
-                      <div class="rl"></div>
-                  </div>
-              </div>
-              <div class="container">
-                  <div class="row">
-                          <div class="modal-body">
-                              <div class="title-bar">
-                                <div class="col-md-12">
-                                  <h2 class="text-center">Project One</h2>
-                                  <div class="heading-border"></div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-md-6">
-                                  <img class="img-fluid img-centered" src="img/portfolio/p-1.jpg" alt="">
-                                </div>
-                                <div class="col-md-6">
-                                  <p>Our new Project every processes had become fragmented; meaning quality and service were inconsistent. This lack of standardization was adversely impacting operating costs, productivity and customer satisfaction. For several years now Payfast has worked strategically with innovations as a means of developing new solutions, products and services. In line with this vision, Success was approached to find new payments solutions to offer Payfast customers on their website, including open invoice and partial payments options.</p>
-                                  <ul class="list-inline item-details">
-                                      <li>Git Link:
-                                          <strong>
-                                            <a href="#">TechsSoft.git</a>
-                                          </strong>
-                                      </li>
-                                      <li>Date:
-                                          <strong>
-                                            <a href="#">April 2018</a>
-                                          </strong>
-                                      </li>
-                                      <li>Service:
-                                          <strong>
-                                            <a href="#">Web Development</a>
-                                          </strong>
-                                      </li>
-									  
-                                  </ul>
-                                  <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
-                                      <i class="fa fa-times"></i> Close
-                                  </button>
-                              </div>
-                            </div>
-                          </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                <div class="row">
-                        <div class="modal-body">
-                            <div class="title-bar">
-                              <div class="col-md-12">
-                                <h2 class="text-center">Project One</h2>
-                                <div class="heading-border"></div>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-6">
-                                <img class="img-fluid img-centered" src="img/portfolio/p-2.jpg" alt="">
-                              </div>
-                              <div class="col-md-6">
-                                <p>Our new Project every processes had become fragmented; meaning quality and service were inconsistent. This lack of standardization was adversely impacting operating costs, productivity and customer satisfaction. For several years now Payfast has worked strategically with innovations as a means of developing new solutions, products and services. In line with this vision, Success was approached to find new payments solutions to offer Payfast customers on their website, including open invoice and partial payments options.</p>
-                                <ul class="list-inline item-details">
-                                    <li>Git Link:
-                                        <strong>
-                                          <a href="#">Techs Soft</a>
-                                        </strong>
-                                    </li>
-                                    <li>Date:
-                                        <strong>
-                                          <a href="#">April 2018</a>
-                                        </strong>
-                                    </li>
-                                    <li>Service:
-                                        <strong>
-                                          <a href="#">Web Development</a>
-                                        </strong>
-                                    </li>
-                                </ul>
-                                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
-                                    <i class="fa fa-times"></i> Close
-                                </button>
-                            </div>
-                          </div>
-                        </div>
-                </div>
-            </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                <div class="row">
-                        <div class="modal-body">
-                            <div class="title-bar">
-                              <div class="col-md-12">
-                                <h2 class="text-center">Project One</h2>
-                                <div class="heading-border"></div>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-6">
-                                <img class="img-fluid img-centered" src="img/portfolio/p-3.jpg" alt="">
-                              </div>
-                              <div class="col-md-6">
-                                <p>Our new Project every processes had become fragmented; meaning quality and service were inconsistent. This lack of standardization was adversely impacting operating costs, productivity and customer satisfaction. For several years now Payfast has worked strategically with innovations as a means of developing new solutions, products and services. In line with this vision, Success was approached to find new payments solutions to offer Payfast customers on their website, including open invoice and partial payments options.</p>
-                                <ul class="list-inline item-details">
-                                    <li>Git Link:
-                                        <strong>
-                                          <a href="#">Techs Soft</a>
-                                        </strong>
-                                    </li>
-                                    <li>Date:
-                                        <strong>
-                                          <a href="#">April 2018</a>
-                                        </strong>
-                                    </li>
-                                    <li>Service:
-                                        <strong>
-                                          <a href="#">Web Development</a>
-                                        </strong>
-                                    </li>
-                                </ul>
-                                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
-                                    <i class="fa fa-times"></i> Close
-                                </button>
-                              </div>
-                          </div>
-                        </div>
-                </div>
-            </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                <div class="row">
-                        <div class="modal-body">
-                            <div class="title-bar">
-                              <div class="col-md-12">
-                                <h2 class="text-center">Project One</h2>
-                                <div class="heading-border"></div>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-6">
-                                <img class="img-fluid img-centered" src="img/portfolio/p-4.jpg" alt="">
-                              </div>
-                              <div class="col-md-6">
-                                <p>Our new Project every processes had become fragmented; meaning quality and service were inconsistent. This lack of standardization was adversely impacting operating costs, productivity and customer satisfaction. For several years now Payfast has worked strategically with innovations as a means of developing new solutions, products and services. In line with this vision, Success was approached to find new payments solutions to offer Payfast customers on their website, including open invoice and partial payments options.</p>
-                                <ul class="list-inline item-details">
-                                    <li>Git Link:
-                                        <strong>
-                                          <a href="#">Techs Soft</a>
-                                        </strong>
-                                    </li>
-                                    <li>Date:
-                                        <strong>
-                                          <a href="#">April 2018</a>
-                                        </strong>
-                                    </li>
-                                    <li>Service:
-                                        <strong>
-                                          <a href="#">Web Development</a>
-                                        </strong>
-                                    </li>
-                                </ul>
-                                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
-                                    <i class="fa fa-times"></i> Close
-                                </button>
-                              </div>
-                          </div>
-                        </div>
-                </div>
-            </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                <div class="row">
-                        <div class="modal-body">
-                            <div class="title-bar">
-                              <div class="col-md-12">
-                                <h2 class="text-center">Project One</h2>
-                                <div class="heading-border"></div>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-6">
-                                <img class="img-fluid img-centered" src="img/portfolio/p-5.jpg" alt="">
-                              </div>
-                              <div class="col-md-6">
-                                <p>Our new Project every processes had become fragmented; meaning quality and service were inconsistent. This lack of standardization was adversely impacting operating costs, productivity and customer satisfaction. For several years now Payfast has worked strategically with innovations as a means of developing new solutions, products and services. In line with this vision, Success was approached to find new payments solutions to offer Payfast customers on their website, including open invoice and partial payments options.</p>
-                                <ul class="list-inline item-details">
-                                    <li>Git Link:
-                                        <strong>
-                                          <a href="#">Techs Soft</a>
-                                        </strong>
-                                    </li>
-                                    <li>Date:
-                                        <strong>
-                                          <a href="#">April 2018</a>
-                                        </strong>
-                                    </li>
-                                    <li>Service:
-                                        <strong>
-                                          <a href="#">Web Development</a>
-                                        </strong>
-                                    </li>
-                                </ul>
-                                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
-                                    <i class="fa fa-times"></i> Close
-                                </button>
-                            </div>
-                          </div>
-                        </div>
-                </div>
-            </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                <div class="row">
-                        <div class="modal-body">
-                            <div class="title-bar">
-                              <div class="col-md-12">
-                                <h2 class="text-center">Project One</h2>
-                                <div class="heading-border"></div>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-6">
-                                <img class="img-fluid img-centered" src="img/portfolio/p-6.jpg" alt="">
-                              </div>
-                              <div class="col-md-6">
-                                <p>Our new Project every processes had become fragmented; meaning quality and service were inconsistent. This lack of standardization was adversely impacting operating costs, productivity and customer satisfaction. For several years now Payfast has worked strategically with innovations as a means of developing new solutions, products and services. In line with this vision, Success was approached to find new payments solutions to offer Payfast customers on their website, including open invoice and partial payments options.</p>
-                                <ul class="list-inline item-details">
-                                    <li>Git Link:
-                                        <strong>
-                                          <a href="#">Techs Soft</a>
-                                        </strong>
-                                    </li>
-                                    <li>Date:
-                                        <strong>
-                                          <a href="#">April 2018</a>
-                                        </strong>
-                                    </li>
-                                    <li>Service:
-                                        <strong>
-                                          <a href="#">Web Development</a>
-                                        </strong>
-                                    </li>
-                                </ul>
-                                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
-                                    <i class="fa fa-times"></i> Close
-                                </button>
-                            </div>
-                          </div>
-                        </div>
-                </div>
-            </div>
-            </div>
-        </div>
-    </div>    
-    <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                <div class="row">
-                        <div class="modal-body">
-                            <div class="title-bar">
-                              <div class="col-md-12">
-                                <h2 class="text-center">Project One</h2>
-                                <div class="heading-border"></div>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-6">
-                                <img class="img-fluid img-centered" src="img/portfolio/p-7.jpg" alt="">
-                              </div>
-                              <div class="col-md-6">
-                                <p>Our new Project every processes had become fragmented; meaning quality and service were inconsistent. This lack of standardization was adversely impacting operating costs, productivity and customer satisfaction. For several years now Payfast has worked strategically with innovations as a means of developing new solutions, products and services. In line with this vision, Success was approached to find new payments solutions to offer Payfast customers on their website, including open invoice and partial payments options.</p>
-                                <ul class="list-inline item-details">
-                                    <li>Git Link:
-                                        <strong>
-                                          <a href="#">Techs Soft</a>
-                                        </strong>
-                                    </li>
-                                    <li>Date:
-                                        <strong>
-                                          <a href="#">April 2018</a>
-                                        </strong>
-                                    </li>
-                                    <li>Service:
-                                        <strong>
-                                          <a href="#">Web Development</a>
-                                        </strong>
-                                    </li>
-                                </ul>
-                                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
-                                    <i class="fa fa-times"></i> Close
-                                </button>
-                            </div>
-                          </div>
-                        </div>
-                </div>
-            </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                <div class="row">
-                        <div class="modal-body">
-                            <div class="title-bar">
-                              <div class="col-md-12">
-                                <h2 class="text-center">Project One</h2>
-                                <div class="heading-border"></div>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-6">
-                                <img class="img-fluid img-centered" src="img/portfolio/p-8.jpg" alt="">
-                              </div>
-                              <div class="col-md-6">
-                                <p>Our new Project every processes had become fragmented; meaning quality and service were inconsistent. This lack of standardization was adversely impacting operating costs, productivity and customer satisfaction. For several years now Payfast has worked strategically with innovations as a means of developing new solutions, products and services. In line with this vision, Success was approached to find new payments solutions to offer Payfast customers on their website, including open invoice and partial payments options.</p>
-                                <ul class="list-inline item-details">
-                                    <li>Git Link:
-                                        <strong>
-                                          <a href="#">Techs Soft</a>
-                                        </strong>
-                                    </li>
-                                    <li>Date:
-                                        <strong>
-                                          <a href="#">April 2018</a>
-                                        </strong>
-                                    </li>
-                                    <li>Service:
-                                        <strong>
-                                          <a href="#">Web Development</a>
-                                        </strong>
-                                    </li>
-                                </ul>
-                                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
-                                    <i class="fa fa-times"></i> Close
-                                </button>
-                            </div>
-                          </div>
-                        </div>
-                </div>
-            </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                <div class="row">
-                        <div class="modal-body">
-                            <div class="title-bar">
-                              <div class="col-md-12">
-                                <h2 class="text-center">Project One</h2>
-                                <div class="heading-border"></div>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-6">
-                                <img class="img-fluid img-centered" src="img/portfolio/p-9.jpg" alt="">
-                              </div>
-                              <div class="col-md-6">
-                                <p>Our new Project every processes had become fragmented; meaning quality and service were inconsistent. This lack of standardization was adversely impacting operating costs, productivity and customer satisfaction. For several years now Payfast has worked strategically with innovations as a means of developing new solutions, products and services. In line with this vision, Success was approached to find new payments solutions to offer Payfast customers on their website, including open invoice and partial payments options.</p>
-                                <ul class="list-inline item-details">
-                                    <li>Git Link:
-                                        <strong>
-                                          <a href="#">Techs Soft</a>
-                                        </strong>
-                                    </li>
-                                    <li>Date:
-                                        <strong>
-                                          <a href="#">April 2018</a>
-                                        </strong>
-                                    </li>
-                                    <li>Service:
-                                        <strong>
-                                          <a href="#">Web Development</a>
-                                        </strong>
-                                    </li>
-                                </ul>
-                                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
-                                    <i class="fa fa-times"></i> Close
-                                </button>
-                            </div>
-                          </div>
-                        </div>
-                </div>
-            </div>
-            </div>
-        </div>
-    </div>     -->
+  
 
   
 
@@ -1723,34 +1013,21 @@ function myFunction(category) {
             @if(count($projects)>0)
             @foreach($projects as $project)
             @if($project->tech_stack=='android')
-        <div class="home">
-         <img src='{{ $project->imgUrl }}' alt="House 1" class="home__img">
-        
-        <svg class="home__like">
-            <use xlink:href="img/sprite.svg#icon-heart-full"></use>
-        </svg>
-        <h5 class="home__name">{{ $project->title }}</h5>
-        <div class="home__location">
-            <svg>
-                <use xlink:href="img/sprite.svg#icon-map-pin"></use>
-            </svg>
-            <p><strong>Description: </strong>{{ $project->description }}</p>
-        </div>
-
-        <div class="home__area">
-            <svg>
-                <use xlink:href="img/sprite.svg#icon-expand"></use>
-            </svg>
-            <p></p>
-        </div>
-        <div class="home__price">
-            <svg>
-                <use xlink:href="img/sprite.svg#icon-key"></use>
-            </svg>
-            <p><strong>Tech_stack: </strong>{{ $project->tech_stack }}</p>
-        </div>
-        <button class="btn-imgbtn home__btn">Contact realtor</button>
-    </div>
+            <div class="container1">
+                <div class="box">
+                    <div class="imgbox">
+                    <img src='{{ $project->imgUrl}}' alt="House 1" class="imgp "> 
+                    </div>
+                    <div class="details">
+                        <div class="content">
+                        <h5 class="heading">{{ $project->title }}</h5>
+                    <p> 1class="desc">{{ $project->description }}</p> 
+                    
+                    <button class="btn2-imgbtn" onclick="location.href='{{$project->GithubUrl}}'">More
+                                    info</button>
+                </div>
+                </div>
+            </div>
 
 @endif
 @endforeach
@@ -1765,36 +1042,22 @@ function myFunction(category) {
             
             @foreach($projects as $project)
    @if($project->tech_stack=='reactjs')
-        <div class="home">
-        <img src='{{ $project->imgUrl }}' alt="House 1" class="home__img"> 
-        
-        <svg class="home__like">
-            <use xlink:href="img/sprite.svg#icon-heart-full"></use>
-        </svg>
-        <h5 class="home__name">{{ $project->title }}</h5>
-        <div class="home__location">
-            <svg>
-                <use xlink:href="img/sprite.svg#icon-map-pin"></use>
-            </svg>
-            <p><strong>Description: </strong>{{ $project->description }}</p>
-        </div>
-
-        <div class="home__area">
-            <svg>
-                <use xlink:href="img/sprite.svg#icon-expand"></use>
-            </svg>
-            <p></p>
-        </div>
-        <div class="home__price">
-            <svg>
-                <use xlink:href="img/sprite.svg#icon-key"></use>
-            </svg>
-            <p><strong>Tech_stack: </strong>{{ $project->tech_stack }}</p>
-        </div>
-        <button class="btn-imgbtn home__btn">Contact realtor</button>
-    </div>
-@endif
-
+   <div class="container1">
+                <div class="box">
+                    <div class="imgbox">
+                    <img src='{{ $project->imgUrl}}' alt="House 1" class="imgp "> 
+                    </div>
+                    <div class="details">
+                        <div class="content">
+                        <h5 class="heading">{{ $project->title }}</h5>
+                    <p> 1class="desc">{{ $project->description }}</p> 
+                    
+                    <button class="btn2-imgbtn" onclick="location.href='{{$project->GithubUrl}}'">More
+                                    info</button>
+                </div>
+                </div>
+            </div>
+            @endif
 @endforeach
 @endif
 </section>`
@@ -1807,35 +1070,21 @@ function myFunction(category) {
             @if(count($projects)>0)
             @foreach($projects as $project)
             @if($project->tech_stack=='nodejs')
-        <div class="home">
-         <img src='{{ $project->imgUrl }}' alt="House 1" class="home__img">
-        
-        <svg class="home__like">
-            <use xlink:href="img/sprite.svg#icon-heart-full"></use>
-        </svg>
-        <h5 class="home__name">{{ $project->title }}</h5>
-        <div class="home__location">
-            <svg>
-                <use xlink:href="img/sprite.svg#icon-map-pin"></use>
-            </svg>
-            <p><strong>Description: </strong>{{ $project->description }}</p>
-        </div>
-
-        <div class="home__area">
-            <svg>
-                <use xlink:href="img/sprite.svg#icon-expand"></use>
-            </svg>
-            <p></p>
-        </div>
-        <div class="home__price">
-            <svg>
-                <use xlink:href="img/sprite.svg#icon-key"></use>
-            </svg>
-            <p><strong>Tech_stack: </strong>{{ $project->tech_stack }}</p>
-        </div>
-        <button class="btn-imgbtn home__btn">Contact realtor</button>
-    </div>
-
+            <div class="container1">
+                <div class="box">
+                    <div class="imgbox">
+                    <img src='{{ $project->imgUrl}}' alt="House 1" class="imgp "> 
+                    </div>
+                    <div class="details">
+                        <div class="content">
+                        <h5 class="heading">{{ $project->title }}</h5>
+                    <p> 1class="desc">{{ $project->description }}</p> 
+                    
+                    <button class="btn2-imgbtn" onclick="location.href='{{$project->GithubUrl}}'">More
+                                    info</button>
+                </div>
+                </div>
+            </div>
 @endif
 @endforeach
 @endif
@@ -1849,34 +1098,21 @@ function myFunction(category) {
             
             @foreach($projects as $project)
    @if($project->tech_stack=='laravel')
-        <div class="home">
-        <img src='{{ $project->imgUrl }}' alt="House 1" class="home__img"> 
-        
-        <svg class="home__like">
-            <use xlink:href="img/sprite.svg#icon-heart-full"></use>
-        </svg>
-        <h5 class="home__name">{{ $project->title }}</h5>
-        <div class="home__location">
-            <svg>
-                <use xlink:href="img/sprite.svg#icon-map-pin"></use>
-            </svg>
-            <p><strong>Description: </strong>{{ $project->description }}</p>
-        </div>
-
-        <div class="home__area">
-            <svg>
-                <use xlink:href="img/sprite.svg#icon-expand"></use>
-            </svg>
-            <p></p>
-        </div>
-        <div class="home__price">
-            <svg>
-                <use xlink:href="img/sprite.svg#icon-key"></use>
-            </svg>
-            <p><strong>Tech_stack: </strong>{{ $project->tech_stack }}</p>
-        </div>
-        <button class="btn-imgbtn home__btn">Contact realtor</button>
-    </div>
+   <div class="container1">
+                <div class="box">
+                    <div class="imgbox">
+                    <img src='{{ $project->imgUrl}}' alt="House 1" class="imgp "> 
+                    </div>
+                    <div class="details">
+                        <div class="content">
+                        <h5 class="heading">{{ $project->title }}</h5>
+                    <p> 1class="desc">{{ $project->description }}</p> 
+                    
+                    <button class="btn2-imgbtn" onclick="location.href='{{$project->GithubUrl}}'">More
+                                    info</button>
+                </div>
+                </div>
+            </div>
 @endif
 
 @endforeach
@@ -1894,36 +1130,23 @@ function myFunction(category) {
             
             @foreach($projects as $project)
 
-        <div class="home">
-        <img src='{{ $project->imgUrl }}' alt="House 1" class="home__img"> 
-        
-        <svg class="home__like">
-            <use xlink:href="img/sprite.svg#icon-heart-full"></use>
-        </svg>
-        <h5 class="home__name">{{ $project->title }}</h5>
-        <div class="home__location">
-            <svg>
-                <use xlink:href="img/sprite.svg#icon-map-pin"></use>
-            </svg>
-            <p><strong>Description: </strong>{{ $project->description }}</p>
-        </div>
+            <div class="container1">
+                <div class="box">
+                    <div class="imgbox">
+                    <img src='{{ $project->imgUrl}}' alt="House 1" class="imgp "> 
+                    </div>
+                    <div class="details">
+                        <div class="content">
+                        <h5 class="heading">{{ $project->title }}</h5>
+                    <p> 1class="desc">{{ $project->description }}</p> 
+                    
+                    <button class="btn2-imgbtn" onclick="location.href='{{$project->GithubUrl}}'">More
+                                    info</button>
+                </div>
+                </div>
+            </div>
 
-        <div class="home__area">
-            <svg>
-                <use xlink:href="img/sprite.svg#icon-expand"></use>
-            </svg>
-            <p></p>
-        </div>
-        <div class="home__price">
-            <svg>
-                <use xlink:href="img/sprite.svg#icon-key"></use>
-            </svg>
-            <p><strong>Tech_stack: </strong>{{ $project->tech_stack }}</p>
-        </div>
-        <button class="btn-imgbtn home__btn">Contact realtor</button>
-    </div>
-
-
+           
 @endforeach
 @endif
 </section>`

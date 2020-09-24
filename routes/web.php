@@ -15,9 +15,9 @@ use App\Http\Controllers\ProjectsController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
 
@@ -43,5 +43,5 @@ Route::get('/', function () {
 
 Route::resource('contact-us', ContactUSController::class);
 
-Route::resource('projects', ProjectsController::class);
+Route::resource('/', ProjectsController::class);
 

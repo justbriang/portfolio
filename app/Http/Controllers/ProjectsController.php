@@ -43,7 +43,8 @@ class ProjectsController extends Controller
             'title' => 'required|max:255',
             'description'=>'required|max:255',
             'image'=>'required',
-            'tech_stack'=>'required|max:255'
+            'tech_stack'=>'required|max:255',
+            'GithubUrl'=>'required|max:255'
 
         ]);
 
@@ -57,13 +58,14 @@ Storage::disk('s3')->setVisibility($imagepath,'public');
         // $project =create($input);
        $project=new Project();
        $project->title=$request->input('title');
+       $project->GithubUrl=$request->input('GithubUrl');
        $project->description=$request->input('description');
        $project->imageName=Basename($imagepath);
        $project->imgUrl=Storage::disk('s3')->url($imagepath);
        $project->tech_stack=$request->input('tech_stack');
        $project->save();
 
-       return redirect('/projects')->with('success', 'Post Created');
+       return redirect('/')->with('success', 'Post Created');
 
         // return (new ProjectsResource($project))
         //     ->response()
