@@ -788,7 +788,7 @@
                         <h5 class="heading">{{ $project->title }}</h5>
                     <p> 1class="desc">{{ $project->description }}</p> 
                     
-                    <button class="btn btn-general btn-green filter-b" onclick="location.href='{{$project->GithubUrl}}'">More
+                    <button class="btn btn-primary py-3 px-5" onclick="location.href='{{$project->GithubUrl}}'">More
                                     info</button>
                 </div>
                 </div>
@@ -799,13 +799,16 @@
 @endif
 
 </section>
-
-<div class="u-center-text u-margin-top-small u-margin-bottom-medium">
+<div class="row my-auto">
+             
+			 <div class="col-md-12">
+			   <div class="port-head-cont">
 
                 <button class="btn btn-general btn-green filter-b"
                     onclick="location.href='https://github.com/Emutisya?tab=repositories'">See
                     More</button>
-
+</div>
+</div>
             </div>
 	
     </section>
