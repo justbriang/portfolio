@@ -802,8 +802,8 @@
 
 <div class="u-center-text u-margin-top-small u-margin-bottom-medium">
 
-                <button class="btn1-imgbtn u-center-text"
-                    onclick="location.href='https://github.com/justbriang?tab=repositories'">See
+                <button class="btn btn-general btn-green filter-b"
+                    onclick="location.href='https://github.com/Emutisya?tab=repositories'">See
                     More</button>
 
             </div>
