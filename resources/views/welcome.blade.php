@@ -788,8 +788,8 @@
                         <h5 class="heading">{{ $project->title }}</h5>
                     <p> 1class="desc">{{ $project->description }}</p> 
                     
-                    <button class="btn btn-primary py-3 px-5" onclick="location.href='{{$project->GithubUrl}}'">More
-                                    info</button>
+                    <button class="btn btn-primary py-3 px-5" onclick="location.href='{{$project->GithubUrl}}'">View on Git
+                                   </button>
                 </div>
                 </div>
             </div>
