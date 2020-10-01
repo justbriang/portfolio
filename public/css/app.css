@@ -11595,6 +11595,32 @@ body {
   justify-content: center;
 }
 
+.nav {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 2rem;
+  align-items: center;
+}
+
+.nav__link:link,
+.nav__link:visited {
+  font-size: 1.4rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1.5rem;
+  display: block;
+  transition: all 0.2s;
+}
+
+.nav__link:hover,
+.nav__link:active {
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateY(-3px);
+}
+
 .feature-box {
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 1.5rem;
@@ -11856,14 +11882,14 @@ body {
 
 .footer {
   background-color: #333;
-  padding: 10rem 0;
+  padding: 5rem 0;
   font-size: 1.4rem;
   color: #f7f7f7;
 }
 
 .footer__logo-box {
   text-align: center;
-  margin-bottom: 8rem;
+  margin-bottom: 3rem;
 }
 
 .footer__logo {
@@ -11911,6 +11937,42 @@ body {
   padding-top: 2rem;
   width: 80%;
   float: right;
+}
+
+.fa {
+  padding: 2rem;
+  font-size: 5rem;
+  width: 2rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+
+.fa-instagram {
+  color: #55c57a;
+}
+
+/* Twitter */
+
+.fa-twitter {
+  color: #55c57a;
+}
+
+.fa-linkedin {
+  color: #55c57a;
+}
+
+.fa-github {
+  color: #55c57a;
 }
 
 .row {

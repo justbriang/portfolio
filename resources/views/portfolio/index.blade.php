@@ -107,8 +107,8 @@
                         <li><a href="#"><i class="lnr lnr-home"></i> Nairobi, Kenya</a></li>
                     </ul>
 
-
-                    <a href="#" class="btn-text slowmo">Learn more &rarr;</a>
+                 
+                    <a href="/img/about.jpg" data-lightbox="cv" class="btn-text slowmo">Learn more &rarr;</a>
                 </div>
                 <div class="col-1-of-2">
                     <div class="composition">
@@ -567,7 +567,7 @@
             </div>
         </section>
         -->
-
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.5.207/build/pdf.min.js"></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <script>
         function myFunction(category) {

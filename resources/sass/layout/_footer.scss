@@ -1,12 +1,12 @@
 .footer {
     background-color: $color-grey-dark-3;
-    padding: 10rem 0;
+    padding: 5rem 0;
     font-size: 1.4rem;
     color: $color-grey-light-1;
 
     &__logo-box {
         text-align: center;
-        margin-bottom: 8rem;
+        margin-bottom: 3rem;
     }
 
     &__logo {
@@ -58,3 +58,36 @@
         float: right;
     }
 }
+.fa {
+    padding: 2rem;
+    font-size: 5rem;
+    width: 2rem;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-instagram {
+    color: $color-primary;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    
+    color: $color-primary;
+  }
+  .fa-linkedin {
+    
+    color: $color-primary;
+  }
+  .fa-github {
+    
+    color: $color-primary;
+  }

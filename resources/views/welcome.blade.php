@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link href="css/lightbox.min.css" rel="stylesheet" />
     <script src="js/lightbox-plus-jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
@@ -55,7 +56,7 @@
         </nav>
     </div>
 
-    <header class="header">
+    <header class="header" id='home'>
 
         <div class="header__logo-box">
             <img src="img/logo-white.png" alt="Logo" class="header__logo">
@@ -108,8 +109,9 @@
                         <li><a href="#"><i class="lnr lnr-home"></i> Nairobi, Kenya</a></li>
                     </ul>
 
-
-                    <a href="#" class="btn-text slowmo">Learn more &rarr;</a>
+                    {{-- <a href="{{ asset('files/file.pdf') }}">Open the pdf!</a> --}}
+                    <a href="{{ asset('icons/BrianResume.pdf') }}" class="btn-text slowmo">Learn more
+                        &rarr;</a>
                 </div>
                 <div class="col-1-of-2">
                     <div class="composition">
@@ -378,8 +380,11 @@
                                 <h5 class="heading">{{ $project->title }}</h5>
                                 <p class="desc">{{ $project->description }}</p>
                                 <br>
-                                <button class="btn2-imgbtn" onclick="location.href='{{$project->GithubUrl}}'">More
+                                {{-- <button class="btn2-imgbtn" onclick="location.href='{{$project->GithubUrl}}'">More
+                                info</button> --}}
+                                <button class="btn2-imgbtn" onclick="popupF({{$project->imgURL,$project->description,$project->title}})">More
                                     info</button>
+                                {{-- <a href="#popup" class="btn btn--white">Book now!</a> --}}
                             </div>
 
                         </div>
@@ -475,105 +480,65 @@
     </main>
 
     <footer class="footer">
+        <div class="footer__logo-box">
 
+            <ul class="footer__list u-center-text">
+                <a href="https://www.instagram.com/brian_g_karanja/" class="fa fa-instagram"></a>
+                <a href="https://www.linkedin.com/in/brian-karanja-752bb81a8/" class="fa fa-linkedin"></a>
+                <a href="https://github.com/justbriang" class="fa fa-github"></a>
+                <a href="https://twitter.com/gichukx" class="fa fa-twitter"></a>
+            </ul>
+
+
+        </div>
         <div class="row">
             <div class="col-1-of-2">
+
                 <div class="footer__navigation">
                     <ul class="footer__list">
-                        <ul class="list basic_info">
-                            <li><a href="#"><i class="lnr lnr-calendar-full"></i> 31st December, 1992</a></li>
-                            <li><a href="#"><i class="lnr lnr-phone-handset"></i> 44 (012) 6954 783</a></li>
-                            <li><a href="#"><i class="lnr lnr-envelope"></i> businessplan@donald</a></li>
-                            <li><a href="#"><i class="lnr lnr-home"></i> Santa monica bullevard</a></li>
-                        </ul>
-
+                        <li class="footer__item"><a href="#home" class="footer__link">Home</a></li>
+                        <li class="footer__item"><a href="#about" class="footer__link">About me</a></li>
+                        <li class="footer__item"><a href="#features" class="footer__link">Skills</a></li>
+                        <li class="footer__item"><a href="#project" class="footer__link">projects</a></li>
+                        <li class="footer__item"><a href="#contact" class="footer__link">Contact me</a></li>
                     </ul>
+
                 </div>
+
             </div>
             <div class="col-1-of-2">
-                <div class="footer__navigation">
-                    <p>try try</p>
-                </div>
+                <p class="footer__copyright">
+                    Reach out, and lets make software that makes a difference
+                </p>
             </div>
         </div>
     </footer>
 
-
-
-    <!--
-        <section class="grid-test">
-            <div class="row">
-                <div class="col-1-of-2">
-                    Col 1 of 2
-                </div>
-                <div class="col-1-of-2">
-                    Col 1 of 2
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-3">
-                    Col 1 of 3
-                </div>
-                <div class="col-1-of-3">
-                    Col 1 of 3
-                </div>
-                <div class="col-1-of-3">
-                    Col 1 of 3
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-3">
-                    Col 1 of 3
-                </div>
-                <div class="col-2-of-3">
-                    Col 2 of 3
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-2-of-4">
-                    Col 2 of 4
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-3-of-4">
-                    Col 3 of 4
-                </div>
-            </div>
-        </section>
-        -->
-
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <script>
+        function popupF(imgUrl,description,title){
+        <div class="popup" id="popup">
+        <div class="popup__content">
+            <div class="popup__left">
+            <img src= imgUrl alt="Tour photo" class="popup__img">
+             
+            </div>
+            <div class="popup__right">
+                <a href="#section-tours" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+                <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
+                <p class="popup__text">
+                  project->description
+                </p>
+                <a href="#" class="btn btn--green">Book now</a>
+            </div>
+        </div>
+    </div>
+    }
+    </script>
+    <script>
         function myFunction(category) {
-    // document.getElementById("demo").style.color = "red";
+ 
     switch(category){
         case "android":
             document.getElementById("project").innerHTML = ""; 
